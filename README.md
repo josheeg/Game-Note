@@ -23,11 +23,61 @@ OLLAMA_CONTEXT_LENGTH=32000 ollama serve
 try keepalive
 OLLAMA_KEEP_ALIVE=-1 ollama serve
 
-goose isolated enviroment
+goose isolated environment
 
-tool calling goose rpi loops reserch plan implement loop 
+offical doc
+https://block.github.io/goose/docs/tutorials/isolated-development-environments/
+blog
+https://block.github.io/goose/blog/2025/06/19/isolated-development-environments/
+
+tool calling goose rpi loops research plan implement loop 
+Research → Plan → Implement Pattern
+https://block.github.io/goose/docs/tutorials/rpi
+installed at 2. Add Custom Slash Commands….
 
 goose ralph loop feedback to rpi goose ralph loops
-
+https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
+https://block.github.io/goose/docs/tutorials/ralph-loop
 gui
 
+commands
+ollama ps
+wisper voice to text
+
+sudo systemctl stop ollama
+
+
+ufw allow 1234
+
+OLLAMA_CONTEXT_LENGTH=64000 ollama serve
+OLLAMA_CONTEXT_LENGTH=8000 ollama serve
+OLLAMA_CONTEXT_LENGTH=16000 ollama serve
+OLLAMA_CONTEXT_LENGTH=32000 ollama serve
+
+OLLAMA_KEEP_ALIVE=-1 ollama serve
+
+byteshape compressed coder models qwen3 30b coder ~10gb
+
+byteshape relased new more compressed pi sized devstral and qwen3 30b a3b coder q3 possible..
+
+should 10gb or bpw effect tps
+
+https://www.reddit.com/r/LocalLLaMA/comments/1r85o89/devstral_small_2_24b_qwen3_coder_30b_coders_for/
+
+ollama run hf.co/byteshape/Qwen3-Coder-30B-A3B-Instruct-GGUF:Qwen3-Coder-30B-A3B-Instruct-IQ4_XS-4.20bpw.gguf
+
+Instruct-Q3_K_S-2.69bpw.gguf
+
+ollama run hf.co/byteshape/Qwen3-Coder-30B-A3B-Instruct-GGUF:Qwen3-Coder-30B-A3B-Instruct-Q3_K_S-2.69bpw.gguf
+
+under2.70 bpw shows as 10gb should be reasonable.
+
+3 faster would be interesting to try..
+
+devstral small smaller than qwen 3 30b coder.. dense model..
+https://huggingface.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF
+
+
+ollama run hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ4_XS-4.04bpw.gguf
+
+Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf
