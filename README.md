@@ -85,3 +85,6 @@ Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf
 google sugjested ollama keep alive context length 16k
 
 OLLAMA_KEEP_ALIVE=24h OLLAMA_CONTEXT_LENGTH=16384 ollama serve
+
+test
+i have some notes for some games id like demos of what libraries should we get ready can you run rpi reserch plan implement loops with ralph loops. 
