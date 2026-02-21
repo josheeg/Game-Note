@@ -2,20 +2,26 @@
 Game Note Raspberry pi 5 16gb agent coder
 
 items for setup ingredients 
-    • Raspberry Pi 5 16 gb ram Mfr. #: SC1113
 
-    • Wall Mount AC Adapters Raspberry Pi 5 27W USB-C Mfr. #: SC1152
+Hardware:
+Raspberry Pi 5 16 gb ram Mfr. #: SC1113
 
-    • 8 Inch Touchscreen for Raspberry Pi,5-Point 1280 * 800 IPS Touchscreen Portable Monitor with HDMI Interface Dual-Speaker for Raspberry Pi 5
+Wall Mount AC Adapters Raspberry Pi 5 27W USB-C Mfr. #: SC1152
 
-    • Official Raspbery Pi M.2 HAT+ Compact, Designed for Raspbery Pi 5, HAT+ Standard, Supports NVMe Protocol M.2 Solid State Drive with 2230 Form Factor
+8 Inch Touchscreen for Raspberry Pi,5-Point 1280 * 800 IPS Touchscreen Portable Monitor with HDMI Interface Dual-Speaker for Raspberry Pi 5
 
-    • 256GB M.2 2230 SSD NVMe Gen3x4, Up to 2100MB/s，PCIe 3.0 SSD, TLC 3D NAND Flash
+Official Raspbery Pi M.2 HAT+ Compact, Designed for Raspbery Pi 5, HAT+ Standard, Supports NVMe Protocol M.2 Solid State Drive with 2230 Form Factor
 
-ollama model --verbose compare devstral rpi models both byteshape tps...
-    • usb microphone small and gaming usb mic compare wisper library
+256GB M.2 2230 SSD NVMe Gen3x4, Up to 2100MB/s，PCIe 3.0 SSD, TLC 3D NAND Flash
 
-todo
+usb microphone small and gaming usb mic compare wisper library
+
+Software:
+ollama model --verbose compare devstral rpi models both byteshape tps…
+
+
+todo:
+
 try different context
 
  OLLAMA_KEEP_ALIVE=24h OLLAMA_CONTEXT_LENGTH=16000 ollama serve
