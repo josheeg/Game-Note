@@ -83,7 +83,7 @@ trying larger byteshape qwen if tool fail caused a stop
 trying opencode as a alternative
 
 trying to take care of server client timeouts
-OLLAMA_CONTEXT_LENGTH=16384 OLLAMA_LOAD_TIMEOUT=25m OLLAMA_KEEP_ALIVE=-1 ollama serve 
+OLLAMA_CONTEXT_LENGTH=16384 OLLAMA_LOAD_TIMEOUT=25m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=4 ollama serve
 
 # **Output:**
 
