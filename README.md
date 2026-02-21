@@ -79,6 +79,23 @@ trying opencode as a alternative
 
 # **Output:**
 
+josheeg@josheeg:~ $ goose
+starting session | provider: ollama model: hf.co/byteshape/Qwen3-Coder-30B-A3B-Instruct-GGUF:Qwen3-Coder-30B-A3B-Instruct-IQ3_S-2.83bpw.gguf
+    session id: 20260221_5
+    working directory: /home/josheeg
+
+goose is running! Enter your instructions, or try asking what goose can do.
+
+Context: ○○○○○○○○○○ 0% (0/128000 tokens)
+( O)> make a plan to make a a game what libraries are needed rpi loops ralph loops reserch plan imliment loops
+I'll help you create a plan for making a game using Raspberry Pi, Ralph Loops, and Reserch Plan IMLiment Loops. Let me first explore what tools and libraries might be needed, then outline a comprehensive plan.
+
+First, let me check what tools are available to understand our capabilities better:
+
+─── list_functions | code_execution ──────────────────────────
+
+
+
 # **issue:?**
 tool call or freeze fallowing debug logs route... 
 https://block.github.io/goose/docs/troubleshooting/
