@@ -155,7 +155,10 @@ time=2026-02-21T12:10:07.278-06:00 level=INFO source=server.go:1388 msg="llama r
 [GIN] 2026/02/21 - 12:42:13 | 500 |         9m59s |       127.0.0.1 | POST     "/v1/chat/completions"
 time=2026-02-21T12:42:13.304-06:00 level=INFO source=runner.go:922 msg="aborting completion request due to client closing the connection"
 
-
+# **model status**
+josheeg@josheeg:~ $ ollama ps
+NAME                                                                                                 ID              SIZE     PROCESSOR    CONTEXT    UNTIL             
+hf.co/byteshape/Qwen3-Coder-30B-A3B-Instruct-GGUF:Qwen3-Coder-30B-A3B-Instruct-IQ3_S-2.83bpw.gguf    5130f7c6e978    12 GB    100% CPU     16384      24 hours from now    
 
 
 # **issue:?**
