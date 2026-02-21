@@ -38,11 +38,13 @@ hf.co/byteshape/Llama-3.1-8B-Instruct-GGUF:Llama-3.1-8B-Instruct-Q3_K_S-3.24bpw.
 
 **longer out to do:**
 
-**goose isolated environment**
+**goose isolated environment** docker engine needed rasbery pi arm and arm is not well supported... sd or ssd backup.... 
 offical doc
 https://block.github.io/goose/docs/tutorials/isolated-development-environments/
 blog
 https://block.github.io/goose/blog/2025/06/19/isolated-development-environments/
+
+**sceduled sd or ssd backup incrimently over time....**
 
 **tool calling goose rpi loops research plan implement loop**
 **Research → Plan → Implement Pattern**
@@ -76,7 +78,14 @@ sudo systemctl stop ollama
 trying larger byteshape qwen if tool fail caused a stop
 trying opencode as a alternative
 
-prompt:
+**Output:**
+
+**issue:?**
+tool call or freeze fallowing debug logs route... 
+https://block.github.io/goose/docs/troubleshooting/
+https://block.github.io/goose/docs/troubleshooting/diagnostics-and-reporting
+
+**prompt:**
 make a plan to make a a game what libraries are needed 
 rpi loops
 ralph loops 
