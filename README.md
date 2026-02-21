@@ -17,12 +17,16 @@ Mini USB Microphone Mouser #: 485-3367
 
 # **Software:**
 ollama model --verbose compare devstral rpi models both byteshape tps…
+https://docs.ollama.com/quickstart
 
 wisper library
 
 opencode
+https://opencode.ai/
+https://docs.ollama.com/integrations/opencode
 
 goose ai
+https://block.github.io/goose/docs/quickstart/
 
 **byteshape coding models under 11gb around 2.70bpw q3**
 
