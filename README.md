@@ -37,7 +37,7 @@ hf.co/byteshape/Llama-3.1-8B-Instruct-GGUF:Llama-3.1-8B-Instruct-Q3_K_S-3.24bpw.
 
 # **longer out to do:**
 
-# **goose isolated environment** docker engine needed rasbery pi arm and arm is not well supported... sd or ssd backup.... 
+**goose isolated environment** docker engine needed rasbery pi arm and arm is not well supported... sd or ssd backup.... 
 offical doc
 https://block.github.io/goose/docs/tutorials/isolated-development-environments/
 blog
