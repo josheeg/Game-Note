@@ -67,13 +67,14 @@ ollama ps
 
 wisper voice to text
 
+ufw allow 1234
+
 sudo systemctl stop ollama
 
 OLLAMA_CONTEXT_LENGTH=16384 OLLAMA_LOAD_TIMEOUT=25m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=2 ollama serve
 
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session start
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
 
-ufw allow 1234
 
 # **todo:**
 try different context
