@@ -167,3 +167,4 @@ Please retry if you think this is a transient or recoverable error.
 ⏱️  Elapsed time: 52m 43s
 Context: ○○○○○○○○○○ 2% (2349/128000 tokens)
 
+ollama run hf.co/byteshape/Qwen3-Coder-30B-A3B-Instruct-GGUF:Qwen3-Coder-30B-A3B-Instruct-IQ3_S-2.83bpw.gguf
