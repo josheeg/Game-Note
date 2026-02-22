@@ -305,6 +305,8 @@ model doesnt load by ram space context may have to be way small or special like 
 
 openhands 7b q4 nl 32768 context length might fit... 
 
+adjusted client side timeouts for goose kilo code kilo code expoirt inport 
+
 # **prompt:**
 make a plan to make a a game what libraries are needed 
 reserch plan implement loops
