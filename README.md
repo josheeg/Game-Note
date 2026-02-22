@@ -319,7 +319,15 @@ This plan provides a structured approach to game development, starting from init
 Context: ○○○○○○○○○○ 0% (4067/1048576 tokens)
 ( O)> Press Ctrl+C again to exit, or type new instructions to continue
 
+# **Ask google api goose to create virtual enviroment it worked with kilo code**
 
+( O)> create a virtual enviroment 
+
+─── 1 tool call | execute ──────────────────────────
+  1. Developer.shell: Execute a shell command
+
+Segmentation fault
+josheeg@josheeg:~/game $ 
 
 
 # **issue:?**
