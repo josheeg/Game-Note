@@ -216,9 +216,9 @@ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 openhands
 
 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 toad acp "openhands acp"
 
-**Seems to have started maby settings are adjusted...?**
+**has started timeout adjusted and avalible space**
 
-model doesnt load by ram space context may have to be way small or special like open hands remodeling. 
+qwen3 30b coder byteshape model doesnt load by ram space context smaller or devstral or qwen2.5 14b coder
 
 openhands 7b q4 nl 32768 context length might fit... 
 
@@ -235,6 +235,16 @@ OLLAMA_CONTEXT_LENGTH=10000 OLLAMA_LOAD_TIMEOUT=60m OLLAMA_KEEP_ALIVE=-1 OLLAMA_
 since goose yaml file edited timeout i think the module timeouts are cli adjustable nice check anyuways increase try vs code may take in any... 
 
 
+**current test commands**
+
+OLLAMA_CONTEXT_LENGTH=10000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 toad acp "goose session"
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
+
+
 # **prompt:**
+
 make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
 
