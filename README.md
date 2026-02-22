@@ -50,6 +50,40 @@ hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Ins
 
 https://docs.ollama.com/modelfile
 
+# 1. THE SOURCE
+# Replace with the actual path to your downloaded IQ3_S / 2.67bpw GGUF file
+FROM ./devstral-small-v1-iq3_s.gguf
+
+# 2. PARAMETERS
+# Devstral is tuned for low temperature to ensure code reliability
+PARAMETER temperature 0.15
+PARAMETER top_p 0.95
+PARAMETER repeat_penalty 1.1
+
+# Essential for long repo-scale tasks (Model supports up to 128k)
+PARAMETER num_ctx 32768
+
+# Stop tokens to prevent the model from "hallucinating" user/assistant turns
+PARAMETER stop "[INST]"
+PARAMETER stop "[/INST]"
+PARAMETER stop "</s>"
+PARAMETER stop "[SYSTEM_PROMPT]"
+PARAMETER stop "[/SYSTEM_PROMPT]"
+
+# 3. SYSTEM PROMPT
+# This prompt triggers the agentic "Chain of Thought" behavior Devstral is known for
+SYSTEM """
+You are Devstral, an expert AI software engineer. 
+Your goal is to solve complex programming tasks using a step-by-step reasoning approach.
+- Always provide clean, efficient, and production-ready code.
+- Before writing code, briefly analyze the requirements and propose a plan.
+- You are proficient in multi-file editing and navigating large codebases.
+- Maintain a professional, technical, and concise tone.
+"""
+
+# 4. TEMPLATE (Mistral V3 / Tekken Format)
+TEMPLATE """{{- if .System }}[SYSTEM_PROMPT]{{ .System }}[/SYSTEM_PROMPT]{{ end }}[INST] {{ .Prompt }} [/INST]"""
+
 **goose isolated environment** docker engine needed rasbery pi arm and arm is not well supported... sd or ssd backup.... 
 offical doc
 https://block.github.io/goose/docs/tutorials/isolated-development-environments/
