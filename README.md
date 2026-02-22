@@ -286,6 +286,13 @@ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
 
 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
+/research_codebase "look through the cloned goose repo and research how ..."
+
+/create_plan a removal of the Tool Selection Strategy feature
+
+/implement_plan thoughts/plans/2025-12-23-remove-tool-selection-strategy.md
+
+
 
 # **prompt:**
 
@@ -293,6 +300,15 @@ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
 Entering plan mode. make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
  /endplan
+
+/research_codebase "look through the cloned goose repo and research the prompt and what they would need for requirements and steps"
+
+/create_plan make a a game what libraries are needed and steps
+
+/implement_plan from plan
+
+
+
 
 make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
 
