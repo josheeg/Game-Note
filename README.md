@@ -283,5 +283,10 @@ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session web --open
 
 # **prompt:**
 
+/plan
+
+Entering plan mode. make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
+ /endplan
+
 make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
 
