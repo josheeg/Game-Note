@@ -303,6 +303,8 @@ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 toad acp "openhands acp"
 
 model doesnt load by ram space context may have to be way small or special like open hands remodeling. 
 
+openhands 7b q4 nl 32768 context length might fit... 
+
 # **prompt:**
 make a plan to make a a game what libraries are needed 
 reserch plan implement loops
