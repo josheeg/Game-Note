@@ -267,10 +267,12 @@ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
 # **todo:**
 try different context
 trying opencode as a alternative
+
 try train like openhands model specific to tools kilo code... qwen2.5 14b code... 
 qwen2.514bcoder
 
-# **issue:?**
+https://huggingface.co/OpenHands/openhands-lm-7b-v0.1
+
 tool call or freeze fallowing debug logs route... 
 https://block.github.io/goose/docs/troubleshooting/
 https://block.github.io/goose/docs/troubleshooting/diagnostics-and-reporting
