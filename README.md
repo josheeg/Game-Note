@@ -46,6 +46,8 @@ https://block.github.io/goose/blog/2025/06/19/isolated-development-environments/
 
 # **sceduled sd or ssd backup incrimently over time....**
 
+https://vorta.borgbase.com/install/linux/
+
 # **tool calling goose rpi loops research plan implement loop**
 **Research → Plan → Implement Pattern**
 
