@@ -16,7 +16,8 @@ Official Raspbery Pi M.2 HAT+ Compact, Designed for Raspbery Pi 5, HAT+ Standard
 Mini USB Microphone Mouser #: 485-3367
 
 # **Software:**
-ollama model --verbose compare devstral rpi models both byteshape tps…
+ollama model 
+
 https://docs.ollama.com/quickstart
 
 wisper library
@@ -29,14 +30,14 @@ not tested opencode with timouts off
 
 vs code starts ollama server is it a second? timeouts happen as ollama commands to code 
 
-goose ai
+#**goose ai**
 https://block.github.io/goose/docs/quickstart/
 
-worked with devstral 9k context.
+**worked with devstral 9k context.**
 
 **byteshape coding models under 11gb around 2.70bpw q3**
 
-devstral seem to be the ones that fit with context. 8.8gb-10gb..
+devstral seem to be the ones that fit with context. 9.3gb 9k context tested
 
 josheeg@josheeg:~ $ ollama list
 NAME                                                                                                             ID              SIZE      MODIFIED     
@@ -68,9 +69,6 @@ installed at 2. Add Custom Slash Commands….
 # **goose ralph loop feedback to rpi goose ralph loops**
 https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
 https://block.github.io/goose/docs/tutorials/ralph-loop
-
-# **python ai generated arm gui when running todo**
-try toad then goose..
 
 # **Output:**
 
