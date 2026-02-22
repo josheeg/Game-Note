@@ -184,26 +184,25 @@ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
 
 # **todo:**
 try different context
+devstral
+9k worked
+10k worked
+
+
 trying opencode as a alternative
 
-try train like openhands model specific to tools kilo code... qwen2.5 14b code... 
-qwen2.514bcoder
-
+openhands toad configure so no timeout...
 https://huggingface.co/OpenHands/openhands-lm-7b-v0.1
 
-tool call or freeze fallowing debug logs route... 
-https://block.github.io/goose/docs/troubleshooting/
-https://block.github.io/goose/docs/troubleshooting/diagnostics-and-reporting
+vs code seems more complex
+timeout was the issue
 
-
-with google api tool calling doesnt work is it a limit of goose?
-Opencode may have more gemini free options maby it cant call tools
 grock free tier
 could these settings allow kilo code to run?
 
 # **server start**
 
-OLLAMA_CONTEXT_LENGTH=32768 OLLAMA_LOAD_TIMEOUT=60m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+OLLAMA_CONTEXT_LENGTH=10000 OLLAMA_LOAD_TIMEOUT=60m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
 # **client start**
 
@@ -236,10 +235,6 @@ OLLAMA_CONTEXT_LENGTH=10000 OLLAMA_LOAD_TIMEOUT=60m OLLAMA_KEEP_ALIVE=-1 OLLAMA_
 since goose yaml file edited timeout i think the module timeouts are cli adjustable nice check anyuways increase try vs code may take in any... 
 
 
-
 # **prompt:**
-make a plan to make a a game what libraries are needed 
-reserch plan implement loops
-ralph loops 
-reserch plan imliment loops
+make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
 
