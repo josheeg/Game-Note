@@ -226,7 +226,6 @@ devstral
 9k worked
 10k worked
 
-
 trying opencode as a alternative
 
 openhands toad configure so no timeout...
