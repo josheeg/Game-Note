@@ -307,6 +307,8 @@ openhands 7b q4 nl 32768 context length might fit...
 
 adjusted client side timeouts for goose kilo code kilo code expoirt inport 
 
+https://kilo.ai/docs/getting-started/settings
+
 # **prompt:**
 make a plan to make a a game what libraries are needed 
 reserch plan implement loops
