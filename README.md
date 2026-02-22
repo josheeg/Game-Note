@@ -45,6 +45,10 @@ hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Ins
 
 # **longer out to do:**
 
+**custom model file custom server and config files bash script**
+
+https://docs.ollama.com/modelfile
+
 **goose isolated environment** docker engine needed rasbery pi arm and arm is not well supported... sd or ssd backup.... 
 offical doc
 https://block.github.io/goose/docs/tutorials/isolated-development-environments/
