@@ -102,6 +102,12 @@ https://vorta.borgbase.com/install/linux/
 https://block.github.io/goose/docs/tutorials/rpi
 installed at 2. Add Custom Slash Commands….
 
+/research_codebase "look through the cloned goose repo and research how the LLM Tool Discovery is implemented"
+
+/create_plan a removal of the Tool Selection Strategy feature
+
+/implement_plan thoughts/plans/2025-12-23-remove-tool-selection-strategy.md
+
 # **goose ralph loop feedback to rpi goose ralph loops**
 https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
 https://block.github.io/goose/docs/tutorials/ralph-loop
