@@ -154,6 +154,9 @@ Context: ○○○○○○○○○○ 2% (2934/128000 tokens)
 
 
 # **model status**
+ollama ps
+NAME                                                                                                             ID              SIZE      PROCESSOR    CONTEXT    UNTIL   
+hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf    87f2090ca6d6    9.1 GB    100% CPU     9000       Forever    
 
 
 # **Goose running free gemini tier**
