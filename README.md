@@ -335,6 +335,11 @@ tool call or freeze fallowing debug logs route...
 https://block.github.io/goose/docs/troubleshooting/
 https://block.github.io/goose/docs/troubleshooting/diagnostics-and-reporting
 
+with google api tool calling doesnt work is it a limit of goose?
+Opencode may have more gemini free options maby it cant call tools
+grock free tier
+could these settings allow kilo code to run?
+
 OLLAMA_CONTEXT_LENGTH=16384 OLLAMA_LOAD_TIMEOUT=25m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=2 ollama serve
 
 OLLAMA_CONTEXT_LENGTH=4096 OLLAMA_LOAD_TIMEOUT=60m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
