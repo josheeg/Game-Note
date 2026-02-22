@@ -84,6 +84,8 @@ Your goal is to solve complex programming tasks using a step-by-step reasoning a
 # 4. TEMPLATE (Mistral V3 / Tekken Format)
 TEMPLATE """{{- if .System }}[SYSTEM_PROMPT]{{ .System }}[/SYSTEM_PROMPT]{{ end }}[INST] {{ .Prompt }} [/INST]"""
 
+ollama create devstral-iq3 -f devstral-iq3.modelfile
+
 **goose isolated environment** docker engine needed rasbery pi arm and arm is not well supported... sd or ssd backup.... 
 offical doc
 https://block.github.io/goose/docs/tutorials/isolated-development-environments/
