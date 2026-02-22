@@ -66,6 +66,86 @@ https://block.github.io/goose/docs/tutorials/ralph-loop
 
 # **Output:**
 
+josheeg@josheeg:~ $ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
+
+starting session | provider: ollama model: hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf
+    session id: 20260222_9
+    working directory: /home/josheeg
+
+goose is running! Enter your instructions, or try asking what goose can do.
+
+Context: ○○○○○○○○○○ 0% (0/128000 tokens)
+( O)> make a plan to make a a game what libraries are needed reserch plan implement loops ralph loops reserch plan imliment loops
+
+
+It looks like you want to create a game with a focus on implementing different types of loops (Ralph loops and regular loops). Let me help you create a plan for this project.
+
+## Game Development Plan
+
+### 1. Research Phase
+- [ ] Research game libraries/frameworks that support loops and animations
+- [ ] Study existing implementations of loops in games
+- [ ] Understand Ralph loops specifically (whatever they are in your context)
+- [ ] Research game loop patterns (main game loop, update loops, render loops)
+
+### 2. Planning Phase
+- [ ] Define the game concept
+- [ ] Design the main game loop structure
+- [ ] Plan how to implement both regular and Ralph loops
+- [ ] Storyboard key animations and state transitions
+
+### 3. Implementation Phase
+- [ ] Set up project with chosen libraries
+- [ ] Implement the main game loop
+- [ ] Create regular game loops (update, render)
+- [ ] Implement Ralph loops specifically
+- [ ] Build core game mechanics
+- [ ] Add visual elements and animations
+- [ ] Implement state management
+
+### 4. Testing Phase
+- [ ] Test loop synchronization
+- [ ] Verify visual consistency across frames
+- [ ] Performance testing for different scenarios
+- [ ] Debug timing issues
+
+### 5. Refinement Phase
+- [ ] Optimize loops for performance
+- [ ] Polish animations
+- [ ] Add error handling for loop edge cases
+- [ ] Final testing and bug fixes
+
+## Technical Questions to Address
+1. What game library/framework should we use? (Unity, Godot, custom canvas?)
+2. What specifically are Ralph loops?
+3. What type of game will this be (platformer, puzzle, etc.)?
+4. Should the loops be visible/manageable by the player or just backend mechanics?
+
+## Recommended Libraries
+Here are some libraries that might be useful:
+
+```typescript
+// Possible JavaScript game libraries to consider:
+const gameLibraries = [
+    "Phaser",        // Feature-rich HTML5 game framework
+    "PixiJS",        // fast 2D rendering
+    "KabamDNJ",      // mobile-focused
+    "BablyonJS",     // 3D/2D game library
+    "GameShell",     // lightweight framework
+    "ThreeJS"        // for potential 3D loops
+];
+```
+
+## Next Steps
+1. Which of these libraries would you like to focus on?
+2. Can you elaborate more on what Ralph loops are?
+3. What kind of game do you envision making?
+
+Would you like me to create a detailed implementation plan using one of these libraries, or would you prefer to explore the loop concepts first?
+
+⏱️  Elapsed time: 83m 46s
+Context: ○○○○○○○○○○ 2% (2934/128000 tokens)
+
 
 # **server output**
 
