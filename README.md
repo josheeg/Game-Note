@@ -239,10 +239,13 @@ since goose yaml file edited timeout i think the module timeouts are cli adjusta
 
 OLLAMA_CONTEXT_LENGTH=10000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 toad acp "goose session"
-
 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
 
+goose web --open
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session web --open
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
 # **prompt:**
 
