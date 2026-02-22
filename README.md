@@ -61,31 +61,7 @@ https://block.github.io/goose/docs/tutorials/ralph-loop
 # **python ai generated arm gui when running todo**
 
 
-# **commands**
 
-ollama ps
-
-wisper voice to text
-
-ufw allow 1234
-
-sudo systemctl stop ollama
-
-OLLAMA_CONTEXT_LENGTH=16384 OLLAMA_LOAD_TIMEOUT=25m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=2 ollama serve
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
-
-
-# **todo:**
-try different context
-trying opencode as a alternative
-try train like openhands model specific to tools kilo code... qwen2.5 14b code... 
-qwen2.514bcoder
-
-# **trying to take care of server client timeouts**
-OLLAMA_CONTEXT_LENGTH=16384 OLLAMA_LOAD_TIMEOUT=25m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=2 ollama serve
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session start
 
 
 # **Output:**
@@ -273,6 +249,26 @@ Context: ○○○○○○○○○○ 0% (4067/1048576 tokens)
 Segmentation fault
 josheeg@josheeg:~/game $ 
 
+# **commands**
+
+ollama ps
+
+wisper voice to text
+
+ufw allow 1234
+
+sudo systemctl stop ollama
+
+OLLAMA_CONTEXT_LENGTH=16384 OLLAMA_LOAD_TIMEOUT=25m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=2 ollama serve
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
+
+
+# **todo:**
+try different context
+trying opencode as a alternative
+try train like openhands model specific to tools kilo code... qwen2.5 14b code... 
+qwen2.514bcoder
 
 # **issue:?**
 tool call or freeze fallowing debug logs route... 
