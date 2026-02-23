@@ -302,8 +302,11 @@ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
 /implement_plan thoughts/plans/2025-12-23-remove-tool-selection-strategy.md
 
+add tempriture max tokens
 
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
+GOOSE_TEMPERATURE=0.1 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 # **prompt:**
 
 /plan
