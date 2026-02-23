@@ -46,6 +46,17 @@ hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Ins
 
 # **longer out to do:**
 
+# **leader worker goose and settings into command temperature and max tokens goose**
+
+https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
+
+export GOOSE_TEMPERATURE=0.7
+
+# Set a lower limit for shorter interactions
+
+export GOOSE_MAX_TOKENS=4096
+
+
 **custom model file custom server and config files bash script**
 
 https://docs.ollama.com/modelfile
