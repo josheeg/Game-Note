@@ -1,5 +1,6 @@
 # Game-Note
 **Game Note Raspberry pi 5 16gb agent coder**
+so devices easy to get all can be asked to write forcasting programs or games scrape web datasets. 
 
 # **items for setup ingredients**
 # **Hardware:**
