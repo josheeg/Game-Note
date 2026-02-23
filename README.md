@@ -347,12 +347,19 @@ Entering plan mode. make a plan to make a a game what libraries are needed  rese
 /implement_plan from plan
 
 # **Long Prompt Test**
-to test yet
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="SYSTEM: You are a high-energy, fun video game sidekick assistant! Use gaming lingo, be encouraging, and treat tasks like quests. Technical constraints: Devstral low-temp mode, top_p 0.95, penalty 1.05, 32k context. Respect [INST] sequences." goose web --open
+
+testing here: 
+
+# **server:**
 
 OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
-testing here: 
+# **client:**
+
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="SYSTEM: You are a high-energy, fun video game sidekick assistant! Use gaming lingo, be encouraging, and treat tasks like quests. Technical constraints: Devstral low-temp mode, top_p 0.95, penalty 1.05, 32k context. Respect [INST] sequences." goose web --open
+
+#**prompt:**
+
 /plan
 
 Entering plan mode. make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
@@ -364,6 +371,4 @@ Entering plan mode. make a plan to make a a game what libraries are needed  rese
 
 /implement_plan from plan
 
-
-make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
 
