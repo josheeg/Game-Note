@@ -125,91 +125,38 @@ https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
 https://block.github.io/goose/docs/tutorials/ralph-loop
 
 # **Output:**
+Let me help you create a plan for making a game. Let's break this down into clear steps.
 
-async function run() {
-  // First, let's search for relevant extensions that might be useful for game development
-  const availableExtensions = await Extensionmanager.searchAvailableExtensions({ query: "game development" });
-  console.log("Available game development extensions:", JSON.stringify(availableExtensions));
+<plan>
+1. Research game development libraries and frameworks
+2. Define the game concept and requirements
+3. Create a project structure
+4. Implement core game mechanics
+5. Add visual elements and user interaction
+6. Test and iterate on gameplay
+</plan>
 
-  // Search for loop-related concepts and examples
-  const loopExamples = await Extensionmanager.searchAvailableExtensions({ query: "loops programming" });
-  console.log("Loop-related examples:", JSON.stringify(loopExamples));
+Now let me research what libraries would be needed for this task:
 
-  // Plan the game concept based on loops
-  await Todo.todoWrite({
-    title: "Game Development Plan: Focus on Loops",
-    description: 
-### Game Concept: Loop Master
-**Core Concept:** A game where the player controls characters whose movements and abilities are controlled by different types of programming loops.
+<subagent>
+<instructions>Research game development libraries that could be used to create a simple game. Focus on JavaScript/Python libraries that support:
+- Graphics rendering
+- Input handling (keyboard/mouse)
+- Game loops (update and render cycles)
+- Collision detection
+- Audio capabilities</instructions>
+</subagent>
 
-**Game Mechanics:**
-1. **Character Types Based on Loops:**
-   - For Loop Character: Moves in precise patterns (e.g., rectangular paths)
-   - While Loop Character: Moves until a condition is met (avoid obstacles)
-   - Recursion Character: Can "fork" into clone characters for multi-tasking
-   - Nested Loop Character: Has special abilities that require understanding of nested loops
+<subagent>
+<instructions>Look through the goose codebase to understand existing game-related functionality or examples. Check for:
+- Any existing game development tools or extensions
+- Previous game implementations in the codebase
+- Visualization tools that might be adaptable for games
+- Input handling capabilities</instructions>
+</subagent>
 
-2. **Levels:**
-   - Beginner: Basic for loops to collect items
-   - Intermediate: While loops with conditional termination
-   - Advanced: Recursive challenges (e.g., fractal patterns)
-   - Expert: Combined loop types in real-time strategies
-
-3. **Educational Elements:**
-   - Visual representation of loop variables and counters
-   - Code snippets shown as the player uses each character type
-   - Challenges to optimize loops (fewest iterations, etc.)
-
-**Technical Implementation Plan:**
-
-1. Game Engine Selection:
-   - Canvas API for 2D graphics
-   - JavaScript for game logic and loops
-
-2. Required Libraries:
-   - [Howler.js](https://howler.no/) or [p5.js](https://p5js.org/) for easier development
-   - No external libraries needed if using pure Canvas API
-
-3. Core Components to Build:
-   - Game loop (requestAnimationFrame)
-   - Character classes with different loop behaviors
-   - Level design system with loop-based objectives
-   - Visual debugger for loops (shows iteration count, variables)
-
-4. Learning Resources:
-   - [MDN JavaScript Loops Guide](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Indices_and_iterators#Loops)
-   - [Game Loop Article](https://www.computerandgames.com/article.html?item=123)
-   - [Khan Academy: Making Moves with Arrays and Loops](https://www.khanacademy.org/computing/computer-programming/algorithms-underneath-cp/iterating-with-while-loops/a/intro-to-for-loops)
-
-**Development Roadmap:**
-1. Week 1: Set up basic game environment and prototype simple loop-based movement
-2. Week 2: Implement different character types with varying loop behaviors
-3. Week 3: Design levels with increasing complexity
-4. Week 4: Add educational features and visual debugging tools
-5. Week 5: Test, balance, and polish
-
-**Research Tasks:**
-- Study different ways to visualize loops in games
-- Research game mechanics that naturally require/teach loops
-- Look at existing programming education games for inspiration (e.g., Light Bot, Code.org Studio)
-,
-    tags: ["game development", "loops", "education", "javascript"]
-  });
-
-  // Search for visualizations of loops that could inspire game design
-  const visualizationExtensions = await Extensionmanager.searchAvailableExtensions({ query: "data visualization" });
-  console.log("Visualization extensions:", JSON.stringify(visualizationExtensions));
-
-  return {
-    planCompleted: true,
-    researchFocus: [
-      "game loop implementation",
-      "loop visualization techniques",
-      "interactive programming tutorials",
-      "javascript game development"
-    ]
-  };
-}
+Once we have this research completed, I'll create a detailed implementation plan with specific steps and library recommendations.
+10:30 PM
 
 # **server output**
 
