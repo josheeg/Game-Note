@@ -306,7 +306,26 @@ add tempriture max tokens
 
 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
-GOOSE_TEMPERATURE=0.1 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
+test ai generated command
+
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
+
+**modlefile information in prompt and system from ollama**
+# 2. Performance & Sampling Parameters
+# Devstral is optimized for low-temperature accuracy.
+PARAMETER temperature 0.15
+PARAMETER top_p 0.95
+PARAMETER repeat_penalty 1.05
+PARAMETER num_ctx 32768
+
+# 3. Stop Sequences (Standard for Mistral/Devstral)
+PARAMETER stop "[INST]"
+PARAMETER stop "[/INST]"
+PARAMETER stop "</s>"
+
+test first ai generated
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="Devstral optimized: low-temperature accuracy, top_p 0.95, penalty 1.05, context 32k. Handle stop sequences [INST] and [/INST] strictly." goose web --open
+
 # **prompt:**
 
 /plan
