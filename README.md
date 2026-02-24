@@ -210,6 +210,36 @@ could these settings allow kilo code to run?
 
 OLLAMA_CONTEXT_LENGTH=10000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
+# **Ralph Loop**
+
+https://block.github.io/goose/docs/tutorials/ralph-loop/
+
+~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React"
+
+You can pass a file path instead of a string. This works well for PRDs, detailed specs, or any multi-step task that benefits from iterative development:
+
+~/.config/goose/recipes/ralph-loop.sh ./prd.md
+
+interesting prompt 
+create a game prd.md file
+
+# **Configure models example for Ralph loop**
+
+RALPH_WORKER_MODEL="gpt-4o" \
+RALPH_WORKER_PROVIDER="openai" \
+RALPH_REVIEWER_MODEL="claude-sonnet-4-20250514" \
+RALPH_REVIEWER_PROVIDER="anthropic" \
+~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React"
+
+downoad and install files for these agents
+
+# **Advanced Cognee Usage with goose**
+
+https://block.github.io/goose/docs/tutorials/advanced-cognee-usage/
+
+This tutorial covers advanced usage patterns for the Cognee extension with goose, including automated memory management, knowledge graph optimization, and various integration strategies.
+
+
 # **client start**
 
 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
@@ -242,25 +272,16 @@ since goose yaml file edited timeout i think the module timeouts are cli adjusta
 
 **current test commands**
 
-OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=260m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+
+test first ai generated
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="Devstral optimized: low-temperature accuracy, top_p 0.95, penalty 1.05, context 32k. Handle stop sequences [INST] and [/INST] strictly." goose web --open
+
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="SYSTEM: You are a high-energy, fun video game sidekick assistant! Use gaming lingo, be encouraging, and treat tasks like quests. Technical constraints: Devstral low-temp mode, top_p 0.95, penalty 1.05, 32k context. Respect [INST] sequences." goose web --open
+
 
 1400 seg falt
 
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
-
-/research_codebase "look through the cloned goose repo and research how ..."
-
-/create_plan a removal of the Tool Selection Strategy feature
-
-/implement_plan thoughts/plans/2025-12-23-remove-tool-selection-strategy.md
-
-add tempriture max tokens
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
-
-test ai generated command
-
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
 **modlefile information in prompt and system from ollama**
 # 2. Performance & Sampling Parameters
@@ -275,10 +296,6 @@ PARAMETER stop "[INST]"
 PARAMETER stop "[/INST]"
 PARAMETER stop "</s>"
 
-test first ai generated
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="Devstral optimized: low-temperature accuracy, top_p 0.95, penalty 1.05, context 32k. Handle stop sequences [INST] and [/INST] strictly." goose web --open
-
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="SYSTEM: You are a high-energy, fun video game sidekick assistant! Use gaming lingo, be encouraging, and treat tasks like quests. Technical constraints: Devstral low-temp mode, top_p 0.95, penalty 1.05, 32k context. Respect [INST] sequences." goose web --open
 
 # **prompt:**
 
@@ -293,9 +310,7 @@ Entering plan mode. make a plan to make a a game what libraries are needed  rese
 
 /implement_plan from plan
 
-# **Long Prompt Test**
 
-testing here: 
 
 # **server:**
 
@@ -312,34 +327,6 @@ GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT
 
 
 
-# **Ralph Loop**
-
-https://block.github.io/goose/docs/tutorials/ralph-loop/
-
-~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React"
-
-You can pass a file path instead of a string. This works well for PRDs, detailed specs, or any multi-step task that benefits from iterative development:
-
-~/.config/goose/recipes/ralph-loop.sh ./prd.md
-
-interesting prompt 
-create a game prd.md file
-
-# **Configure models example for Ralph loop**
-
-RALPH_WORKER_MODEL="gpt-4o" \
-RALPH_WORKER_PROVIDER="openai" \
-RALPH_REVIEWER_MODEL="claude-sonnet-4-20250514" \
-RALPH_REVIEWER_PROVIDER="anthropic" \
-~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React"
-
-downoad and install files for these agents
-
-# **Advanced Cognee Usage with goose**
-
-https://block.github.io/goose/docs/tutorials/advanced-cognee-usage/
-
-This tutorial covers advanced usage patterns for the Cognee extension with goose, including automated memory management, knowledge graph optimization, and various integration strategies.
 
 9k context window....
 
