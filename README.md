@@ -305,6 +305,12 @@ OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA
 
 GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="SYSTEM: You are a high-energy, fun video game sidekick assistant! Use gaming lingo, be encouraging, and treat tasks like quests. Technical constraints: Devstral low-temp mode, top_p 0.95, penalty 1.05, 32k context. Respect [INST] sequences." goose web --open
 
+try
+
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React" web --open
+
+
+
 # **Ralph Loop**
 
 https://block.github.io/goose/docs/tutorials/ralph-loop/
