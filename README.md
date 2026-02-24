@@ -307,6 +307,9 @@ GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT
 
 try
 
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
+
+
 GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React" web --open
 
 
@@ -361,7 +364,7 @@ Entering plan mode. make a plan to make a forcasting program with tensorflow ker
 
 test
 
-~/.config/goose/recipes/ralph-loop.sh "Product Requirements Document: Shadow Protocol (Working Title)
+Product Requirements Document: Shadow Protocol (Working Title)
 
 1. Executive Summary
 
@@ -453,8 +456,4 @@ Boot Time: Under 10 seconds from OS desktop to Main Menu.
 
 Thermal Stability: Game must run for 2+ hours without triggering thermal throttling on a standard Pi 5 active cooler.
 
-Input Latency: Sub-16ms response time."
-
-
-
-
+Input Latency: Sub-16ms response time.
