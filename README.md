@@ -321,6 +321,9 @@ You can pass a file path instead of a string. This works well for PRDs, detailed
 
 ~/.config/goose/recipes/ralph-loop.sh ./prd.md
 
+interesting prompt 
+create a game prd.md file
+
 # **Configure models example for Ralph loop**
 
 RALPH_WORKER_MODEL="gpt-4o" \
