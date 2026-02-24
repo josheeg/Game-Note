@@ -323,6 +323,8 @@ RALPH_REVIEWER_MODEL="claude-sonnet-4-20250514" \
 RALPH_REVIEWER_PROVIDER="anthropic" \
 ~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React"
 
+downoad and install files for these agents
+
 # **Advanced Cognee Usage with goose**
 
 https://block.github.io/goose/docs/tutorials/advanced-cognee-usage/
