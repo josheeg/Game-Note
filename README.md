@@ -332,6 +332,11 @@ GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT
 
 rm -rf .goose/ralph
 
+research_codebase – Document what exists today. No opinions.
+create_plan - Design the change with clear phases and success criteria.
+implement_plan - Execute the plan step by step with verification.
+iterate_plan – (optional) Adjust the plan if necessary.
+
 # **prompt:**
 
 GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=12000 OLLAMA_TIMEOUT=80800 OPENAI_TIMEOUT=80800 ~/.config/goose/recipes/ralph-loop.sh "forcasting program with tensorflow keras cnn and ltsm deep neuronetworks" web --open
@@ -344,6 +349,7 @@ ollama
 
 /implement_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
 
+/iterate_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
 
 /plan
 
