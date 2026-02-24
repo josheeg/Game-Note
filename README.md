@@ -309,13 +309,13 @@ GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT
 
 /plan
 
-Entering plan mode. make a plan to make a a game what libraries are needed  reserch plan implement loops ralph loops  reserch plan imliment loops
+Entering plan mode. make a plan to make a forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
  /endplan
 
-/research_codebase "look through the cloned goose repo and research the prompt and what they would need for requirements and steps"
+/research_codebase "forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks"
 
-/create_plan make a a game what libraries are needed and steps
+/create_plan make a forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks
 
-/implement_plan from plan
+/implement_plan forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks
 
 
