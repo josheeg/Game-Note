@@ -304,14 +304,11 @@ OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=260m OLLAMA_KEEP_ALIVE=-1 OLLAMA
 
 # **client:**
 
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="SYSTEM: You are a high-energy, fun video game sidekick assistant! Use gaming lingo, be encouraging, and treat tasks like quests. Technical constraints: Devstral low-temp mode, top_p 0.95, penalty 1.05, 32k context. Respect [INST] sequences." goose web --open
-
-try
 
 GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
 
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React" web --open
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ~/.config/goose/recipes/ralph-loop.sh "" web --open
 
 
 
@@ -344,9 +341,20 @@ https://block.github.io/goose/docs/tutorials/advanced-cognee-usage/
 
 This tutorial covers advanced usage patterns for the Cognee extension with goose, including automated memory management, knowledge graph optimization, and various integration strategies.
 
-
+9k context window....
 
 # **prompt:**
+
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=12000 OLLAMA_TIMEOUT=80800 OPENAI_TIMEOUT=80800 ~/.config/goose/recipes/ralph-loop.sh "forcasting program with tensorflow keras cnn and ltsm deep neuronetworks" web --open
+
+hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf
+
+ollama
+
+/create_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
+
+/implement_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
+
 
 /plan
 
@@ -354,107 +362,3 @@ Entering plan mode. make a plan to make a forcasting program with tensorflow ker
  /endplan
 
 /research_codebase "forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks"
-
-/create_plan make a forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks
-
-/implement_plan forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks
-
-/create_plan a list of goose block ai slash commands and them being used from the documentation with references
-
-/implement_plan a list of goose block ai slash commands and them being used from the documentation with references
-
-test
-
-Product Requirements Document: Shadow Protocol (Working Title)
-
-1. Executive Summary
-
-Shadow Protocol is a top-down, 2D stealth-action game designed specifically for the Raspberry Pi 5 (16GB). Players take on the role of an operative infiltrating high-security facilities. The game emphasizes light/shadow mechanics, line-of-sight AI, and tactical gadget usage, utilizing the Pi 5's upgraded GPU and CPU capabilities for smooth 60FPS gameplay at 1080p.
-
-2. Target Hardware: Raspberry Pi 5 (16GB)
-
-Processor: Broadcom BCM2712 (Quad-core ARM Cortex-A76 @ 2.4GHz).
-
-Memory: 16GB LPDDR4X (High overhead for complex AI and asset streaming).
-
-Graphics: VideoCore VII GPU (OpenGL ES 3.1 / Vulkan 1.2).
-
-OS: Raspberry Pi OS (64-bit) with Bookworm.
-
-Controller Support: DualShock 4, Xbox Controller, and Keyboard/Mouse.
-
-3. Core Gameplay Mechanics
-
-3.1 Movement & Stealth
-
-Stance System: Toggle between "Sneak" (silent, slow), "Walk" (standard), and "Sprint" (loud, fast).
-
-Light/Dark Interaction: A dynamic visibility meter based on the player's position relative to light sources (torches, searchlights, lamps).
-
-Cover System: Ability to lean against walls and peer around corners without exposing the full hit-box.
-
-3.2 Artificial Intelligence (AI)
-
-Vision Cones: Variable cones based on environment light.
-
-State Machine:
-
-Idle/Patrol: Standard route.
-
-Suspicious: Triggered by noises or flickering lights; investigates the area.
-
-Alert: Triggered by direct visual contact; calls for backup and pursues.
-
-Audio Detection: Guards react to floor types (carpet vs. metal) and player speed.
-
-3.3 Gadgets & Tools
-
-EMP Grenade: Temporarily disables cameras and lights.
-
-Sonic Decoy: Thrown item to distract guards.
-
-Hacking Tool: Mini-game to unlock doors or disable security grids.
-
-4. Technical Requirements
-
-4.1 Graphics & Performance
-
-Resolution: Native 1920x1080.
-
-Frame Rate: Constant 60 FPS.
-
-Rendering: * 2D dynamic lighting using GLSL shaders.
-
-Shadow mapping for "Vision Obscurance" (hiding behind crates).
-
-Engine Recommendation: Godot 4.x (GLES3 Compatibility mode) or Pygame (with C-extensions).
-
-4.2 Resource Management
-
-VRAM: Limit texture atlases to 2048x2048 to stay within optimal cache limits.
-
-Multithreading: Utilize the 4 cores by offloading AI pathfinding (A*) and audio processing to worker threads.
-
-5. Level Design Guidelines
-
-Non-Linearity: Every room should have at least two entry points (e.g., Main Door and Vent).
-
-Environmental Hazards: Cameras, laser grids, and pressure plates.
-
-Checkpoint System: Frequent "Save Terminals" to account for the high lethality of guard encounters.
-
-6. User Interface (UI)
-
-Minimalist HUD: * Visibility Meter (Eye icon that opens/closes).
-
-Noise Indicator (Expanding ring around the player).
-
-Current Objective text (Auto-hides).
-
-7. Success Metrics
-
-Boot Time: Under 10 seconds from OS desktop to Main Menu.
-
-Thermal Stability: Game must run for 2+ hours without triggering thermal throttling on a standard Pi 5 active cooler.
-
-Input Latency: Sub-16ms response time.
