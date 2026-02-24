@@ -305,6 +305,10 @@ OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA
 
 GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 GOOSE_CUSTOM_PROMPT="SYSTEM: You are a high-energy, fun video game sidekick assistant! Use gaming lingo, be encouraging, and treat tasks like quests. Technical constraints: Devstral low-temp mode, top_p 0.95, penalty 1.05, 32k context. Respect [INST] sequences." goose web --open
 
+~/.config/goose/recipes/ralph-loop.sh "Create a simple browser using Electron and React"
+
+
+
 #**prompt:**
 
 /plan
@@ -318,4 +322,6 @@ Entering plan mode. make a plan to make a forcasting program with tensorflow ker
 
 /implement_plan forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks
 
+/create_plan a list of goose block ai slash commands and them being used from the documentation with references
 
+/implement_plan a list of goose block ai slash commands and them being used from the documentation with references
