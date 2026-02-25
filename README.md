@@ -379,6 +379,17 @@ recipe of prompt to use and enable small note to do more with automation
 
 title: Trip planner
 description: Plan your next trip
+
+parameters:
+  - key: destination
+    input_type: string
+    requirement: required
+    description: Destination for the trip. Should be a large region with multiple climates.
+  - key: duration
+    input_type: number
+    requirement: required
+    description: Number of days for the trip.
+
 prompt: |
 
 
@@ -402,3 +413,5 @@ extensions:
     description: "Weather data for trip planning"
     env_keys:
       - WEATHER_API_KEY
+
+
