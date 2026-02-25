@@ -368,3 +368,11 @@ kilo code cli may get around the timeouts and use the prompt..
 antigravity
 
 TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 antigravity 
+
+web interface styled by css sheet into web plugin stylus css from asking gemini from the blank goose page 
+
+voice to text web browser plugin should work with user interface. 
+
+
+
+
