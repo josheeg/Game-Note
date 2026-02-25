@@ -362,3 +362,7 @@ Entering plan mode. make a plan to make a forcasting program with tensorflow ker
  /endplan
 
 /research_codebase "forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks"
+
+kilo code cli may get around the timeouts and use the prompt.. 
+
+
