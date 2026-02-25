@@ -390,6 +390,11 @@ parameters:
     requirement: required
     description: Number of days for the trip.
 
+settings:
+  goose_provider: "ollama"
+  goose_model: "devstral"
+  temperature: 0.8
+
 prompt: |
 
 
@@ -413,5 +418,8 @@ extensions:
     description: "Weather data for trip planning"
     env_keys:
       - WEATHER_API_KEY
+
+ollama and openai api timeout ...
+goose run --recipe trip.yaml --params destination=Africa --params duration=14
 
 
