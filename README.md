@@ -425,4 +425,10 @@ extensions:
 ollama and openai api timeout ...
 goose run --recipe trip.yaml --params destination=Africa --params duration=14
 
+try roo code inline terminal text setting. 
+
+ OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 code
+
+
+
 
