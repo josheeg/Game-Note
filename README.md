@@ -375,4 +375,30 @@ voice to text web browser plugin should work with user interface.
 
 
 
+recipe of prompt to use and enable small note to do more with automation
 
+title: Trip planner
+description: Plan your next trip
+prompt: |
+
+
+/create_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
+
+/implement_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
+
+/iterate_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
+
+/plan
+
+Entering plan mode. make a plan to make a forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
+ /endplan
+
+extensions:
+  - type: stdio
+    name: weathermcpserver
+    cmd: /Users/svega/Development/weather-mcp-server/weather-mcp-server
+    args: []
+    timeout: 900000000
+    description: "Weather data for trip planning"
+    env_keys:
+      - WEATHER_API_KEY
