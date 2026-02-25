@@ -365,4 +365,6 @@ Entering plan mode. make a plan to make a forcasting program with tensorflow ker
 
 kilo code cli may get around the timeouts and use the prompt.. 
 
+antigravity
 
+TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 antigravity 
