@@ -396,6 +396,9 @@ settings:
   temperature: 0.8
 
 prompt: |
+ You can use the \{\{ recipe_dir \}\}/unesco.csv file to 
+ check information on UNESCO world heritage sites to
+ include in your travel plan.
 
 
 /create_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
