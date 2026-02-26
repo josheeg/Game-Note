@@ -430,5 +430,7 @@ try roo code inline terminal text setting.
  OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 code
 
 
+# kilo code config and opencode config timeout mcp freecad mcp blender
+cad try again worked before with cloud try cloud freecad mcp kicad mcp with kilo code or opencode 
 
 
