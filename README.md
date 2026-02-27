@@ -39,6 +39,7 @@ FROM ./devstral-small-v1-iq3_s.gguf
 ollama run hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf 
 
 # ollama create devstral -f Modelfile
+ollama create choose-a-model-name -f < ./Modelfile>
 
 # *ModelFile*
 
