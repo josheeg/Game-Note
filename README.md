@@ -94,6 +94,8 @@ GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=12288 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOU
 
 
 
+
+
 # **sceduled sd or ssd backup incrimently over time....**
 
 Pika Backup
@@ -115,17 +117,6 @@ installed at 2. Add Custom Slash Commands….
 
 /implement_plan thoughts/plans/2025-12-23-remove-tool-selection-strategy.md
 
-# **commands**
-
-ollama ps
-
-ufw allow 1234
-
-sudo systemctl stop ollama
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
-
-# **Prompt**
 
 # **leader worker goose and settings into command temperature and max tokens goose**
 
@@ -133,20 +124,9 @@ https://block.github.io/goose/docs/guides/environment-variables/#leadworker-mode
 
 export GOOSE_TEMPERATURE=0.7
 
-
 # **goose ralph loop feedback to rpi goose ralph loops**
 https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
 https://block.github.io/goose/docs/tutorials/ralph-loop
-
-
-openhands toad configure so no timeout...
-https://huggingface.co/OpenHands/openhands-lm-7b-v0.1
-
-vs code seems more complex
-timeout was the issue
-
-
-
 
 # **Ralph Loop**
 
@@ -176,6 +156,27 @@ downoad and install files for these agents
 https://block.github.io/goose/docs/tutorials/advanced-cognee-usage/
 
 This tutorial covers advanced usage patterns for the Cognee extension with goose, including automated memory management, knowledge graph optimization, and various integration strategies.
+
+
+
+# **commands**
+
+ollama ps
+
+ufw allow 1234
+
+sudo systemctl stop ollama
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
+
+
+
+
+openhands toad configure so no timeout...
+https://huggingface.co/OpenHands/openhands-lm-7b-v0.1
+
+
+
 
 
 
