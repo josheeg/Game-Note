@@ -8,8 +8,6 @@ Raspberry Pi 5 16 gb ram Mfr. #: SC1113
 
 Wall Mount AC Adapters Raspberry Pi 5 27W USB-C Mfr. #: SC1152
 
-8 Inch Touchscreen for Raspberry Pi,5-Point 1280 * 800 IPS Touchscreen Portable Monitor with HDMI Interface Dual-Speaker for Raspberry Pi 5
-
 Official Raspbery Pi M.2 HAT+ Compact, Designed for Raspbery Pi 5, HAT+ Standard, Supports NVMe Protocol M.2 Solid State Drive with 2230 Form Factor
 
 256GB M.2 2230 SSD NVMe Gen3x4, Up to 2100MB/s，PCIe 3.0 SSD, TLC 3D NAND Flash
@@ -21,15 +19,9 @@ ollama model
 
 https://docs.ollama.com/quickstart
 
-wisper library
-
 opencode
 https://opencode.ai/
 https://docs.ollama.com/integrations/opencode
-
-not tested opencode with timouts off
-
-vs code starts ollama server is it a second? timeouts happen as ollama commands to code 
 
 #**goose ai**
 https://block.github.io/goose/docs/quickstart/
@@ -53,21 +45,16 @@ https://block.github.io/goose/docs/guides/environment-variables/#leadworker-mode
 
 export GOOSE_TEMPERATURE=0.7
 
-# Set a lower limit for shorter interactions
-
-export GOOSE_MAX_TOKENS=4096
-
-
 **custom model file custom server and config files bash script**
 
 https://docs.ollama.com/modelfile
 
 # 1. THE SOURCE
-# Replace with the actual path to your downloaded IQ3_S / 2.67bpw GGUF file
+Replace with the actual path to your downloaded IQ3_S / 2.67bpw GGUF file
 FROM ./devstral-small-v1-iq3_s.gguf
 
 # 2. PARAMETERS
-# Devstral is tuned for low temperature to ensure code reliability
+Devstral is tuned for low temperature to ensure code reliability
 PARAMETER temperature 0.15
 PARAMETER top_p 0.95
 PARAMETER repeat_penalty 1.1
@@ -98,12 +85,6 @@ TEMPLATE """{{- if .System }}[SYSTEM_PROMPT]{{ .System }}[/SYSTEM_PROMPT]{{ end 
 
 ollama create devstral-iq3 -f devstral-iq3.modelfile
 
-**goose isolated environment** docker engine needed rasbery pi arm and arm is not well supported... sd or ssd backup.... 
-offical doc
-https://block.github.io/goose/docs/tutorials/isolated-development-environments/
-blog
-https://block.github.io/goose/blog/2025/06/19/isolated-development-environments/
-
 # **sceduled sd or ssd backup incrimently over time....**
 
 https://vorta.borgbase.com/install/linux/
@@ -125,38 +106,6 @@ https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
 https://block.github.io/goose/docs/tutorials/ralph-loop
 
 # **Output:**
-Let me help you create a plan for making a game. Let's break this down into clear steps.
-
-<plan>
-1. Research game development libraries and frameworks
-2. Define the game concept and requirements
-3. Create a project structure
-4. Implement core game mechanics
-5. Add visual elements and user interaction
-6. Test and iterate on gameplay
-</plan>
-
-Now let me research what libraries would be needed for this task:
-
-<subagent>
-<instructions>Research game development libraries that could be used to create a simple game. Focus on JavaScript/Python libraries that support:
-- Graphics rendering
-- Input handling (keyboard/mouse)
-- Game loops (update and render cycles)
-- Collision detection
-- Audio capabilities</instructions>
-</subagent>
-
-<subagent>
-<instructions>Look through the goose codebase to understand existing game-related functionality or examples. Check for:
-- Any existing game development tools or extensions
-- Previous game implementations in the codebase
-- Visualization tools that might be adaptable for games
-- Input handling capabilities</instructions>
-</subagent>
-
-Once we have this research completed, I'll create a detailed implementation plan with specific steps and library recommendations.
-10:30 PM
 
 # **server output**
 
@@ -166,8 +115,6 @@ Once we have this research completed, I'll create a detailed implementation plan
 
 # **model status**
 ollama ps
-NAME                                                                                                             ID              SIZE      PROCESSOR    CONTEXT    UNTIL   
-hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf    87f2090ca6d6    9.1 GB    100% CPU     9000       Forever    
 
 
 # **Goose running free gemini tier**
