@@ -2,7 +2,6 @@
 **Game Note Raspberry pi 5 16gb agent coder**
 so devices easy to get all can be asked to write forcasting programs or games scrape web datasets. 
 
-# **items for setup ingredients**
 # **Hardware:**
 Raspberry Pi 5 16 gb ram Mfr. #: SC1113
 
@@ -52,6 +51,8 @@ https://docs.ollama.com/modelfile
 # 1. THE SOURCE
 Replace with the actual path to your downloaded IQ3_S / 2.67bpw GGUF file
 FROM ./devstral-small-v1-iq3_s.gguf
+
+ollama run hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf 
 
 # 2. PARAMETERS
 Devstral is tuned for low temperature to ensure code reliability
@@ -125,8 +126,6 @@ ollama ps
 
 ollama ps
 
-wisper voice to text
-
 ufw allow 1234
 
 sudo systemctl stop ollama
@@ -142,16 +141,11 @@ devstral
 9k worked
 10k worked
 
-trying opencode as a alternative
-
 openhands toad configure so no timeout...
 https://huggingface.co/OpenHands/openhands-lm-7b-v0.1
 
 vs code seems more complex
 timeout was the issue
-
-grock free tier
-could these settings allow kilo code to run?
 
 # **server start**
 
