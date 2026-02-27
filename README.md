@@ -79,6 +79,9 @@ PARAMETER stop "[/SYSTEM_PROMPT]"
 
 # 3. SYSTEM PROMPT
 # This prompt triggers the agentic "Chain of Thought" behavior Devstral is known for
+
+test with ollama cpmmand faster...
+
 SYSTEM """
 You are Devstral, an expert AI software engineer. 
 Your goal is to solve complex programming tasks using a step-by-step reasoning approach.
