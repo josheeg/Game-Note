@@ -238,7 +238,7 @@ PARAMETER stop "[/INST]"
 PARAMETER stop "</s>"
 
 
-# **prompt:**
+# **plan template:**
 
 /plan
 
@@ -251,7 +251,7 @@ Entering plan mode. make a plan to make a a game what libraries are needed  rese
 
 /implement_plan from plan
 
-
+# **current test **
 
 # **server:**
 
@@ -265,8 +265,6 @@ GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT
 
 
 GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ~/.config/goose/recipes/ralph-loop.sh "" web --open
-
-
 
 
 9k context window....
@@ -366,10 +364,8 @@ extensions:
 ollama and openai api timeout ...
 goose run --recipe trip.yaml --params destination=Africa --params duration=14
 
-try roo code inline terminal text setting. 
 
- OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 code
-
+# what test is .. --verbose ollama t/s context ssd
 
 # mcp freecad mcp blender
 cad try again worked before with cloud try cloud freecad mcp kicad mcp with goose
