@@ -82,17 +82,19 @@ PARAMETER top_p 0.95
 
 PARAMETER repeat_penalty 1.1
 
-# **leader worker goose and settings into command temperature and max tokens goose**
 
-https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
-
-export GOOSE_TEMPERATURE=0.7
 
 # Essential for long repo-scale tasks (Model supports up to 128k)
 PARAMETER num_ctx 32768
 12k worked...
 
 # **longer out to do:**
+
+# **leader worker goose and settings into command temperature and max tokens goose**
+
+https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
+
+export GOOSE_TEMPERATURE=0.7
 
 **custom model file custom server and config files bash script**
 
