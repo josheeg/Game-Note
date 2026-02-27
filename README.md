@@ -82,6 +82,37 @@ model file also
 OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
 
+# **client start**
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ollama launch
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 code
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 openhands
+
+OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 toad acp "openhands acp"
+
+**has started timeout adjusted and avalible space**
+
+qwen3 30b coder byteshape model doesnt load by ram space context smaller or devstral or qwen2.5 14b coder
+
+openhands 7b q4 nl 32768 context length might fit... 
+
+adjusted client side timeouts for goose kilo code kilo code expoirt inport 
+
+https://kilo.ai/docs/getting-started/settings
+
+trying both to vs code in ai see if a single command can setup timers and allow vs code to run... 
+
+OLLAMA_CONTEXT_LENGTH=9000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 code
+
+
+since goose yaml file edited timeout i think the module timeouts are cli adjustable nice check anyuways increase try vs code may take in any... 
+
+
+
 # **sceduled sd or ssd backup incrimently over time....**
 
 Pika Backup
@@ -165,35 +196,6 @@ https://block.github.io/goose/docs/tutorials/advanced-cognee-usage/
 
 This tutorial covers advanced usage patterns for the Cognee extension with goose, including automated memory management, knowledge graph optimization, and various integration strategies.
 
-
-# **client start**
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ollama launch
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 code
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 openhands
-
-OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 toad acp "openhands acp"
-
-**has started timeout adjusted and avalible space**
-
-qwen3 30b coder byteshape model doesnt load by ram space context smaller or devstral or qwen2.5 14b coder
-
-openhands 7b q4 nl 32768 context length might fit... 
-
-adjusted client side timeouts for goose kilo code kilo code expoirt inport 
-
-https://kilo.ai/docs/getting-started/settings
-
-trying both to vs code in ai see if a single command can setup timers and allow vs code to run... 
-
-OLLAMA_CONTEXT_LENGTH=9000 OLLAMA_LOAD_TIMEOUT=160m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 code
-
-
-since goose yaml file edited timeout i think the module timeouts are cli adjustable nice check anyuways increase try vs code may take in any... 
 
 
 **current test commands**
