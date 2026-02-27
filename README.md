@@ -32,7 +32,6 @@ NAME                                                                            
 hf.co/byteshape/Qwen3-Coder-30B-A3B-Instruct-GGUF:Qwen3-Coder-30B-A3B-Instruct-IQ3_S-2.83bpw.gguf                5130f7c6e978    10 GB     2 hours ago     
 hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf    87f2090ca6d6    8.8 GB    21 hours ago    
 
-
 # The model
 Replace with the actual path to your downloaded IQ3_S / 2.67bpw GGUF file
 FROM ./devstral-small-v1-iq3_s.gguf
@@ -61,8 +60,6 @@ Maintain a professional, technical, and concise tone.
 """
 
 
-
-
 # *Ollama Serve*
 set your keep alive to forever (-1) 
 Use -1 if you want the model to STAY in RAM forever.
@@ -70,10 +67,19 @@ export OLLAMA_LOAD_TIMEOUT="-1"
 export OLLAMA_KEEP_ALIVE="-1"
 ollama serve
 
+OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+model file also
+
+OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+
 # PARAMETERS
+
 Devstral is tuned for low temperature to ensure code reliability
+
 PARAMETER temperature 0.15
+
 PARAMETER top_p 0.95
+
 PARAMETER repeat_penalty 1.1
 
 # **leader worker goose and settings into command temperature and max tokens goose**
@@ -284,7 +290,7 @@ Entering plan mode. make a plan to make a a game what libraries are needed  rese
 
 # **server:**
 
-OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=260m OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
 
 # **client:**
@@ -400,7 +406,12 @@ refining updating document checking what is the up to date parameters
 
 created model file timeout didnt work the line in model file
 
+GOOSE_TEMPERATURE=0.15 GOOSE_TOP_P=0.95 GOOSE_REPEAT_PENALTY=1.1 GOOSE_MAX_TOKENS=12000 OLLAMA_TIMEOUT=-1 OPENAI_TIMEOUT=-1 ~/.config/goose/recipes/ralph-loop.sh "forcasting program with tensorflow keras cnn and ltsm deep neuronetworks" web --open
+
 GOOSE_TEMPERATURE=0.15 GOOSE_TOP_P=0.95 GOOSE_REPEAT_PENALTY=1.1 GOOSE_MAX_TOKENS=12000 OLLAMA_TIMEOUT=80800 OPENAI_TIMEOUT=80800 ~/.config/goose/recipes/ralph-loop.sh "forcasting program with tensorflow keras cnn and ltsm deep neuronetworks" web --open
+
+OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+
 
 # mcp freecad mcp blender
 cad try again worked before with cloud try cloud freecad mcp kicad mcp with goose
