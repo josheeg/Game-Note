@@ -242,21 +242,6 @@ hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Ins
 
 ollama
 
-/create_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
-
-/implement_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
-
-/iterate_plan forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
-
-/plan
-
-Entering plan mode. make a plan to make a forcasting program with tensorflow keras cnn and ltsm deep neuronetworks
- /endplan
-
-/research_codebase "forcasting programs in python with tensorflow and keras cnn ltsm deep neuronetworks"
-
-
-
 web interface styled by css sheet into web plugin stylus css from asking gemini from the blank goose page 
 
 voice to text web browser plugin should work with user interface. 
@@ -331,4 +316,3 @@ OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MA
 cad try again worked before with cloud try cloud freecad mcp kicad mcp with goose
 
 
-GOOSE_TEMPERATURE=0.15 GOOSE_TOP_P=0.95 GOOSE_REPEAT_PENALTY=1.1 GOOSE_MAX_TOKENS=12000 OLLAMA_TIMEOUT=80800 OPENAI_TIMEOUT=80800 ~/.config/goose/recipes/ralph-loop.sh "forcasting program with tensorflow keras cnn and ltsm deep neuronetworks" web --open
