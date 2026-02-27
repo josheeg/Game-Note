@@ -18,16 +18,12 @@ ollama model
 
 https://docs.ollama.com/quickstart
 
-opencode
-https://opencode.ai/
-https://docs.ollama.com/integrations/opencode
-
 #**goose ai**
 https://block.github.io/goose/docs/quickstart/
 
 **worked with devstral 9k context.**
 
-**byteshape coding models under 11gb around 2.70bpw q3**
+byteshape coding models under 11gb around 2.70bpw q3**
 
 devstral seem to be the ones that fit with context. 9.3gb 9k context tested
 
@@ -37,17 +33,20 @@ hf.co/byteshape/Qwen3-Coder-30B-A3B-Instruct-GGUF:Qwen3-Coder-30B-A3B-Instruct-I
 hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf    87f2090ca6d6    8.8 GB    21 hours ago    
 
 
-# 1. The model
+# The model
 Replace with the actual path to your downloaded IQ3_S / 2.67bpw GGUF file
 FROM ./devstral-small-v1-iq3_s.gguf
 
 ollama run hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf 
 
-# 2. PARAMETERS
+# PARAMETERS
 Devstral is tuned for low temperature to ensure code reliability
 PARAMETER temperature 0.15
 PARAMETER top_p 0.95
 PARAMETER repeat_penalty 1.1
+
+
+
 
 # **leader worker goose and settings into command temperature and max tokens goose**
 
@@ -377,7 +376,13 @@ goose run --recipe trip.yaml --params destination=Africa --params duration=14
 
 # what test is .. --verbose ollama t/s context ssd
 
+refining updating document checking what is the up to date parameters
+
+
+GOOSE_TEMPERATURE=0.15 GOOSE_TOP_P=0.95 GOOSE_REPEAT_PENALTY=1.1 GOOSE_MAX_TOKENS=12000 OLLAMA_TIMEOUT=80800 OPENAI_TIMEOUT=80800 ~/.config/goose/recipes/ralph-loop.sh "forcasting program with tensorflow keras cnn and ltsm deep neuronetworks" web --open
+
 # mcp freecad mcp blender
 cad try again worked before with cloud try cloud freecad mcp kicad mcp with goose
 
 
+GOOSE_TEMPERATURE=0.15 GOOSE_TOP_P=0.95 GOOSE_REPEAT_PENALTY=1.1 GOOSE_MAX_TOKENS=12000 OLLAMA_TIMEOUT=80800 OPENAI_TIMEOUT=80800 ~/.config/goose/recipes/ralph-loop.sh "forcasting program with tensorflow keras cnn and ltsm deep neuronetworks" web --open
