@@ -42,7 +42,8 @@ ollama run hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Smal
 # *ModelFile*
 
 # *Ollama Serve*
-
+set your keep alive to forever (-1) 
+Use -1 if you want the model to STAY in RAM forever.
 export OLLAMA_LOAD_TIMEOUT="-1"
 export OLLAMA_KEEP_ALIVE="-1"
 ollama serve
