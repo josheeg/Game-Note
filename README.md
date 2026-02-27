@@ -82,6 +82,8 @@ Maintain a professional, technical, and concise tone.
 
 https://vorta.borgbase.com/install/linux/
 
+pi imager or script backup program
+
 # **tool calling goose rpi loops research plan implement loop**
 **Research → Plan → Implement Pattern**
 
