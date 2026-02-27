@@ -98,9 +98,6 @@ installed at 2. Add Custom Slash Commands….
 
 /implement_plan thoughts/plans/2025-12-23-remove-tool-selection-strategy.md
 
-# **goose ralph loop feedback to rpi goose ralph loops**
-https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
-https://block.github.io/goose/docs/tutorials/ralph-loop
 
 # **Output:**
 
@@ -136,6 +133,11 @@ try different context
 devstral
 9k worked
 10k worked
+
+# **goose ralph loop feedback to rpi goose ralph loops**
+https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
+https://block.github.io/goose/docs/tutorials/ralph-loop
+
 
 openhands toad configure so no timeout...
 https://huggingface.co/OpenHands/openhands-lm-7b-v0.1
