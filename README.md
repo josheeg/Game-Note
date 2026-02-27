@@ -132,8 +132,6 @@ ollama ps
 
 # **Goose running free gemini tier**
 
-# **Ask google api goose to create virtual enviroment it worked with kilo code**
-
 # **commands**
 
 ollama ps
