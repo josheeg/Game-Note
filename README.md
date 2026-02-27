@@ -36,17 +36,6 @@ NAME                                                                            
 hf.co/byteshape/Qwen3-Coder-30B-A3B-Instruct-GGUF:Qwen3-Coder-30B-A3B-Instruct-IQ3_S-2.83bpw.gguf                5130f7c6e978    10 GB     2 hours ago     
 hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf    87f2090ca6d6    8.8 GB    21 hours ago    
 
-# **longer out to do:**
-
-# **leader worker goose and settings into command temperature and max tokens goose**
-
-https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
-
-export GOOSE_TEMPERATURE=0.7
-
-**custom model file custom server and config files bash script**
-
-https://docs.ollama.com/modelfile
 
 # 1. The model
 Replace with the actual path to your downloaded IQ3_S / 2.67bpw GGUF file
@@ -60,10 +49,28 @@ PARAMETER temperature 0.15
 PARAMETER top_p 0.95
 PARAMETER repeat_penalty 1.1
 
+# **leader worker goose and settings into command temperature and max tokens goose**
+
+https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
+
+export GOOSE_TEMPERATURE=0.7
+
+
 # Essential for long repo-scale tasks (Model supports up to 128k)
 PARAMETER num_ctx 32768
+12k worked...
+
+# **longer out to do:**
+
+
+**custom model file custom server and config files bash script**
+
+https://docs.ollama.com/modelfile
 
 # Stop tokens to prevent the model from "hallucinating" user/assistant turns
+
+not shure....
+
 PARAMETER stop "[INST]"
 PARAMETER stop "[/INST]"
 PARAMETER stop "</s>"
