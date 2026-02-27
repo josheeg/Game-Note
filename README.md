@@ -39,6 +39,10 @@ FROM ./devstral-small-v1-iq3_s.gguf
 
 ollama run hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf 
 
+# *ModelFile*
+
+# *Ollama Serve*
+
 # PARAMETERS
 Devstral is tuned for low temperature to ensure code reliability
 PARAMETER temperature 0.15
