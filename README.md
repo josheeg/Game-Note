@@ -43,6 +43,10 @@ ollama run hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Smal
 
 # *Ollama Serve*
 
+export OLLAMA_LOAD_TIMEOUT="-1"
+export OLLAMA_KEEP_ALIVE="-1"
+ollama serve
+
 # PARAMETERS
 Devstral is tuned for low temperature to ensure code reliability
 PARAMETER temperature 0.15
