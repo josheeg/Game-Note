@@ -45,15 +45,11 @@ PARAMETER temperature 0.15
 PARAMETER top_p 0.95
 PARAMETER repeat_penalty 1.1
 
-
-
-
 # **leader worker goose and settings into command temperature and max tokens goose**
 
 https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
 
 export GOOSE_TEMPERATURE=0.7
-
 
 # Essential for long repo-scale tasks (Model supports up to 128k)
 PARAMETER num_ctx 32768
@@ -61,39 +57,26 @@ PARAMETER num_ctx 32768
 
 # **longer out to do:**
 
-
 **custom model file custom server and config files bash script**
 
 https://docs.ollama.com/modelfile
 
-# Stop tokens to prevent the model from "hallucinating" user/assistant turns
+FROM hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf
 
-not shure....
+# 2. Performance & Behavior Parameters
+PARAMETER temperature 0.15
+PARAMETER top_p 0.95
+PARAMETER repeat_penalty 1.1
+PARAMETER num_ctx 8192
 
-PARAMETER stop "[INST]"
-PARAMETER stop "[/INST]"
-PARAMETER stop "</s>"
-PARAMETER stop "[SYSTEM_PROMPT]"
-PARAMETER stop "[/SYSTEM_PROMPT]"
-
-# 3. SYSTEM PROMPT
-# This prompt triggers the agentic "Chain of Thought" behavior Devstral is known for
-
-test with ollama cpmmand faster...
-
+# 4. System Persona
 SYSTEM """
-You are Devstral, an expert AI software engineer. 
-Your goal is to solve complex programming tasks using a step-by-step reasoning approach.
-- Always provide clean, efficient, and production-ready code.
-- Before writing code, briefly analyze the requirements and propose a plan.
-- You are proficient in multi-file editing and navigating large codebases.
-- Maintain a professional, technical, and concise tone.
+You are Devstral, an expert AI software engineer. Your goal is to solve complex programming tasks using a step-by-step reasoning approach.
+Always provide clean, efficient, and production-ready code.
+Before writing code, briefly analyze the requirements and propose a plan.
+You are proficient in multi-file editing and navigating large codebases.
+Maintain a professional, technical, and concise tone.
 """
-
-# 4. TEMPLATE (Mistral V3 / Tekken Format)
-TEMPLATE """{{- if .System }}[SYSTEM_PROMPT]{{ .System }}[/SYSTEM_PROMPT]{{ end }}[INST] {{ .Prompt }} [/INST]"""
-
-ollama create devstral-iq3 -f devstral-iq3.modelfile
 
 # **sceduled sd or ssd backup incrimently over time....**
 
