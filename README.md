@@ -94,9 +94,9 @@ trying both to vs code in ai see if a single command can setup timers and allow 
 
 since goose yaml file edited timeout i think the module timeouts are cli adjustable nice check anyuways increase try vs code may take in any... 
 
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=12288 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
 
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ~/.config/goose/recipes/ralph-loop.sh "" web --open
+GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=12288 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ~/.config/goose/recipes/ralph-loop.sh "" web --open
 
 
 
