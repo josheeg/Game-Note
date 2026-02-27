@@ -159,6 +159,14 @@ This tutorial covers advanced usage patterns for the Cognee extension with goose
 
 
 
+rm -rf .goose/ralph
+
+research_codebase – Document what exists today. No opinions.
+create_plan - Design the change with clear phases and success criteria.
+implement_plan - Execute the plan step by step with verification.
+iterate_plan – (optional) Adjust the plan if necessary.
+
+
 # **commands**
 
 ollama ps
@@ -220,30 +228,6 @@ Entering plan mode. make a plan to make a a game what libraries are needed  rese
 
 /implement_plan from plan
 
-# **current test **
-
-# **server:**
-
-OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
-
-
-# **client:**
-
-
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose web --open
-
-
-GOOSE_TEMPERATURE=0.15 GOOSE_MAX_TOKENS=9000 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 ~/.config/goose/recipes/ralph-loop.sh "" web --open
-
-
-9k context window....
-
-rm -rf .goose/ralph
-
-research_codebase – Document what exists today. No opinions.
-create_plan - Design the change with clear phases and success criteria.
-implement_plan - Execute the plan step by step with verification.
-iterate_plan – (optional) Adjust the plan if necessary.
 
 # **prompt:**
 
