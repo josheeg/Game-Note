@@ -96,26 +96,6 @@ https://block.github.io/goose/docs/guides/environment-variables/#leadworker-mode
 
 export GOOSE_TEMPERATURE=0.7
 
-**custom model file custom server and config files bash script**
-
-https://docs.ollama.com/modelfile
-
-FROM hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24B-Instruct-2512-IQ3_S-2.67bpw.gguf
-
-# 2. Performance & Behavior Parameters
-PARAMETER temperature 0.15
-PARAMETER top_p 0.95
-PARAMETER repeat_penalty 1.1
-PARAMETER num_ctx 8192
-
-# 4. System Persona
-SYSTEM """
-You are Devstral, an expert AI software engineer. Your goal is to solve complex programming tasks using a step-by-step reasoning approach.
-Always provide clean, efficient, and production-ready code.
-Before writing code, briefly analyze the requirements and propose a plan.
-You are proficient in multi-file editing and navigating large codebases.
-Maintain a professional, technical, and concise tone.
-"""
 
 # **sceduled sd or ssd backup incrimently over time....**
 
