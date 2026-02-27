@@ -74,24 +74,7 @@ model file also
 
 OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
-# PARAMETERS
-
-Devstral is tuned for low temperature to ensure code reliability
-
-PARAMETER temperature 0.15
-
-PARAMETER top_p 0.95
-
-PARAMETER repeat_penalty 1.1
-
-
-
-# Essential for long repo-scale tasks (Model supports up to 128k)
-PARAMETER num_ctx 32768
-12k worked...
-
-# **longer out to do:**
-
+# **todo**
 # **leader worker goose and settings into command temperature and max tokens goose**
 
 https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
