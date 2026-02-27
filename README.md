@@ -40,6 +40,7 @@ ollama run hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Smal
 
 # ollama create devstral -f Modelfile
 ollama create choose-a-model-name -f < ./Modelfile>
+ollama create devstral -f ./Modelfile
 
 # *ModelFile*
 
@@ -49,7 +50,7 @@ FROM hf.co/byteshape/Devstral-Small-2-24B-Instruct-2512-GGUF:Devstral-Small-2-24
 PARAMETER temperature 0.15
 PARAMETER top_p 0.95
 PARAMETER repeat_penalty 1.1
-PARAMETER num_ctx 8192
+PARAMETER num_ctx 12288 
 
 
 
@@ -71,9 +72,10 @@ export OLLAMA_KEEP_ALIVE="-1"
 ollama serve
 
 OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
-model file also
 
 OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+
+model file also
 
 # **sceduled sd or ssd backup incrimently over time....**
 
