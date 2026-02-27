@@ -48,7 +48,7 @@ export GOOSE_TEMPERATURE=0.7
 
 https://docs.ollama.com/modelfile
 
-# 1. THE SOURCE
+# 1. The model
 Replace with the actual path to your downloaded IQ3_S / 2.67bpw GGUF file
 FROM ./devstral-small-v1-iq3_s.gguf
 
