@@ -74,14 +74,6 @@ model file also
 
 OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
-# **todo**
-# **leader worker goose and settings into command temperature and max tokens goose**
-
-https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
-
-export GOOSE_TEMPERATURE=0.7
-
-
 # **sceduled sd or ssd backup incrimently over time....**
 
 Pika Backup
@@ -90,6 +82,7 @@ https://vorta.borgbase.com/install/linux/
 
 pi imager or script backup program
 
+# **tested rpi ai loops**
 # **tool calling goose rpi loops research plan implement loop**
 **Research → Plan → Implement Pattern**
 
@@ -101,21 +94,6 @@ installed at 2. Add Custom Slash Commands….
 /create_plan a removal of the Tool Selection Strategy feature
 
 /implement_plan thoughts/plans/2025-12-23-remove-tool-selection-strategy.md
-
-
-# **Output:**
-
-# **server output**
-
-
-# **gemini server response .. or something**
-
-
-# **model status**
-ollama ps
-
-
-# **Goose running free gemini tier**
 
 # **commands**
 
@@ -133,6 +111,14 @@ try different context
 devstral
 9k worked
 10k worked
+
+# **Prompt**
+# **leader worker goose and settings into command temperature and max tokens goose**
+
+https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
+
+export GOOSE_TEMPERATURE=0.7
+
 
 # **goose ralph loop feedback to rpi goose ralph loops**
 https://block.github.io/goose/docs/tutorials/plan-feature-devcontainer-setup
