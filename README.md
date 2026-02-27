@@ -77,6 +77,11 @@ OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MA
 
 model file also
 
+# **server start**
+
+OLLAMA_CONTEXT_LENGTH=12000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+
+
 # **sceduled sd or ssd backup incrimently over time....**
 
 Pika Backup
@@ -108,14 +113,8 @@ sudo systemctl stop ollama
 
 OLLAMA_TIMEOUT=10800 OPENAI_TIMEOUT=10800 goose session
 
-
-# **todo:**
-try different context
-devstral
-9k worked
-10k worked
-
 # **Prompt**
+
 # **leader worker goose and settings into command temperature and max tokens goose**
 
 https://block.github.io/goose/docs/guides/environment-variables/#leadworker-model-configuration
@@ -134,9 +133,6 @@ https://huggingface.co/OpenHands/openhands-lm-7b-v0.1
 vs code seems more complex
 timeout was the issue
 
-# **server start**
-
-OLLAMA_CONTEXT_LENGTH=10000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
 
 
 
