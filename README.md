@@ -365,6 +365,7 @@ goose run --recipe trip.yaml --params destination=Africa --params duration=14
 
 refining updating document checking what is the up to date parameters
 
+created model file timeout didnt work the line in model file
 
 GOOSE_TEMPERATURE=0.15 GOOSE_TOP_P=0.95 GOOSE_REPEAT_PENALTY=1.1 GOOSE_MAX_TOKENS=12000 OLLAMA_TIMEOUT=80800 OPENAI_TIMEOUT=80800 ~/.config/goose/recipes/ralph-loop.sh "forcasting program with tensorflow keras cnn and ltsm deep neuronetworks" web --open
 
