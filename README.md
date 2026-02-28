@@ -319,17 +319,23 @@ note
 
  game rpg town 
 
+goose hints
+
+
 for the rasbery pi 5 16 gb ram
 
-goose ai plan  note...  make a prd.md 
 
-a requirements.txt 
+goose ai plan  note... goose hints  make a prd.md 
 
-main.py add requirements.txt dependencies test run
+plan a requirements.txt 
+
+plan main.py add requirements.txt 
+
+/impliment test run
 
 reserch codebase plan make a plan.md to fallow implement loop
 
-plan from prd.md make a plan.md  
+plan from prd.md other files make a plan.md  
 
 iterattive test
 
