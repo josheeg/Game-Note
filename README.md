@@ -465,3 +465,16 @@ plan from prd.md other files make a plan.md
 iterattive test
 
 # **edited goose config timeouts edited goose extension timeout**
+
+prompt
+
+/plan create python rpg town game for the rasbery pi 5 16gb first create a folder and prepare thoughts.txt research.txt topic.md prd.md main.py requirements.txt plan.md description.md
+
+~/.config/goose/recipes/ralph-loop.sh plan.md
+
+output
+
+/plan create python rpg town game for the rasbery pi 5 16gb first create a folder and prepare thoughts.txt research.txt topic.md prd.md main.py requirements.txt plan.md description.md
+
+~/.config/goose/recipes/ralph-loop.sh plan.md ....
+
