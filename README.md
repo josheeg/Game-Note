@@ -14,6 +14,16 @@ Official Raspbery Pi M.2 HAT+ Compact, Designed for Raspbery Pi 5, HAT+ Standard
 Mini USB Microphone Mouser #: 485-3367
 
 # **Software:**
+
+# **template folder enviroment for pi 5 16gb hello world template git init..**
+
+requirements.txt
+prd.md
+plan.md
+rpi loops
+test rp ralph loop x 2 ...
+
+
 ollama model 
 
 https://docs.ollama.com/quickstart
