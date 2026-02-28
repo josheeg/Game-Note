@@ -22,6 +22,21 @@ requirements.txt // data science ml libraries web scraping rasbery pi io rasbery
 prd.md
 plan.md
 
+folders
+
+venv empty but if i rpi and setup a template this will probably have things
+
+.vscode hiden folder with files in it 
+
+/-game
+
+├── .checkpoints/          <-- AI Agent save points
+
+├── .ipynb_checkpoints/    <-- Jupyter auto-saves
+
+./git
+
+
 
 
 requirements.txt
