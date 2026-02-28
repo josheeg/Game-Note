@@ -432,3 +432,4 @@ plan from prd.md other files make a plan.md
 
 iterattive test
 
+# **edited goose config timeouts edited goose extension timeout**
