@@ -18,7 +18,7 @@ Mini USB Microphone Mouser #: 485-3367
 # **template folder enviroment for pi 5 16gb hello world template git init..**
 
 main.py // hello mention ras pi 5 16gb system info avalible libraries test framework for libraries. 
-requirements.txt // data science ml libraries web scraping rasbery pi io rasbery pi games rasbery pi cpu and rasbery pi gpu
+requirements.txt // data science ml libraries web scraping rasbery pi io rasbery pi games rasbery pi cpu and rasbery pi gpu forcasting keras tuning
 prd.md
 plan.md
 
