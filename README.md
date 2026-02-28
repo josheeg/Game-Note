@@ -377,15 +377,25 @@ note
 
 goose hints
 
-
 for the rasbery pi 5 16 gb ram
 
+plan  note... goose hints  make a prd.md 
 
-goose ai plan  note... goose hints  make a prd.md 
+ralph on prd.md
 
-plan a requirements.txt 
+or rpi p i
 
-plan main.py add requirements.txt 
+plan a requirements.txt
+
+ralph plan.md prd.md
+
+rpi pi plan md prd md
+
+plan main.py add requirements.txt prd.md
+
+ralph plan.md prd.md
+
+rpi or ralph
 
 /impliment test run
 
