@@ -371,17 +371,30 @@ cad try again worked before with cloud try cloud freecad mcp kicad mcp with goos
 
 # plan.md plans are a file files can be passed like text
 
+
+thoughts/
+├── research/
+│   └── YYYY-MM-DD-HHmm-topic.md
+└── plans/
+    └── YYYY-MM-DD-HHmm-description.md
+
 /research_codebase "create rpg town game for the rasbery pi 5 16gb create a folder and prepare thoughts.txt"
 research.txt
 topic.md
 
-/research_codebase "create python rpg town game for the rasbery pi 5 16gb create a folder and prepare thoughts.txt" research.txt topic.md prd.md main.py
 
-/create_plan "create python rpg town game for the rasbery pi 5 16gb create a folder and preparethoughts.txt" research.txt topic.md prd.md main.py
 
-/implement_plan thoughts.txt research.txt topic.md prd.md main.py
+/research_codebase "create python rpg town game for the rasbery pi 5 16gb create a folder and prepare thoughts.txt research.txt topic.md prd.md main.py requirements.txt plan.md description.md"
 
-~/.config/goose/recipes/ralph-loop.sh ./thoughts.txt ./research.txt ./topic.md ./prd.md ./main.py
+~/.config/goose/recipes/ralph-loop.sh ./thoughts.txt ./research.txt ./topic.md ./prd.md ./main.py requirements.txt plan.md description.md
+
+/create_plan "create python rpg town game for the rasbery pi 5 16gb create a folder and preparethoughts.txt" research.txt topic.md prd.md main.py requirements.txt plan.md description.md
+
+~/.config/goose/recipes/ralph-loop.sh ./thoughts.txt ./research.txt ./topic.md ./prd.md ./main.py requirements.txt plan.md description.md
+
+/implement_plan thoughts.txt research.txt topic.md prd.md main.py requirements.txt plan.md description.md
+
+~/.config/goose/recipes/ralph-loop.sh ./thoughts.txt ./research.txt ./topic.md ./prd.md ./main.py requirements.txt plan.md description.md
 
 
 
