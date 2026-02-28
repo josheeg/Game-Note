@@ -190,6 +190,8 @@ You can pass a file path instead of a string. This works well for PRDs, detailed
 
 ~/.config/goose/recipes/ralph-loop.sh ./prd.md
 
+ralph loop requirements prd.md thoughts plan.md requirements.txt main.py
+
 interesting prompt 
 create a game prd.md file
 
