@@ -109,12 +109,66 @@ pi imager or script backup program
 https://block.github.io/goose/docs/tutorials/rpi
 installed at 2. Add Custom Slash Commands….
 
+research_codebase – Document what exists today. No opinions.
+create_plan - Design the change with clear phases and success criteria.
+implement_plan - Execute the plan step by step with verification.
+iterate_plan – (optional) Adjust the plan if necessary.
+┌─────────────────────────────────────────────────────────────────────────────-┐
+│                           RPI WORKFLOW                                       │
+├─────────────────────────────────────────────────────────────────────────────-┤
+│                                                                              │
+│  /research_codebase "topic"                                                  │
+│       │                                                                      │
+│       ├──► Spawns parallel sub-agents:                                       │
+│       │    • find_files (rpi-codebase-locator)                               │
+│       │    • analyze_code (rpi-codebase-analyzer)                            │
+│       │    • find_patterns (rpi-pattern-finder)                              │
+│       │                                                                      │
+│       └──► Output: thoughts/research/YYYY-MM-DD-HHmm-topic.md                │
+│                                                                              │
+│  /create_plan "feature/task"                                                 │
+│       │                                                                      │
+│       ├──► Reads research docs                                               │
+│       ├──► Asks clarifying questions                                         │
+│       ├──► Proposes design options                                           │
+│       │                                                                      │
+│       └──► Output: thoughts/plans/YYYY-MM-DD-HHmm-description.md             │
+│                                                                              │
+│  /implement_plan "plan path"                                                 │
+│       │                                                                      │
+│       ├──► Executes phase by phase                                           │
+│       ├──► Runs verification after each phase                                │
+│       ├──► Updates checkboxes in plan                                        │
+│       │                                                                      │
+│       └──► Working code                                                      │
+│                                                                              │
+│  /iterate_plan "plan path" + feedback                                        │
+│       │                                                                      │
+│       ├──► Researches only what changed                                      │
+│       ├──► Updates the plan surgically                                       │
+│       │                                                                      │
+│       └──► Updated plan                                                      │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────-┘
+
+All RPI outputs live in a predictable place:
+
+thoughts/
+├── research/
+│   └── YYYY-MM-DD-HHmm-topic.md
+└── plans/
+    └── YYYY-MM-DD-HHmm-description.md
+
 /research_codebase "look through the cloned goose repo and research how the LLM Tool Discovery is implemented"
 
 /create_plan a removal of the Tool Selection Strategy feature
 
 /implement_plan thoughts/plans/2025-12-23-remove-tool-selection-strategy.md
 
+research_codebase thoughts topic.md
+create_plan thoughts topic.md prd.md plan.md thoughts
+implement_plan plan.md description.md
+iterate_plan plan.md description.md
 
 # **leader worker goose and settings into command temperature and max tokens goose**
 
