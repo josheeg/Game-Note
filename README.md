@@ -313,4 +313,23 @@ OLLAMA_CONTEXT_LENGTH=8000 OLLAMA_LOAD_TIMEOUT=-1 OLLAMA_KEEP_ALIVE=-1 OLLAMA_MA
 # mcp freecad mcp blender
 cad try again worked before with cloud try cloud freecad mcp kicad mcp with goose
 
+# plan.md plans are a file files can be passed like text
+
+note
+
+ game rpg town 
+
+for the rasbery pi 5 16 gb ram
+
+goose ai plan  note...  make a prd.md 
+
+a requirements.txt 
+
+main.py add requirements.txt dependencies test run
+
+reserch codebase plan make a plan.md to fallow implement loop
+
+plan from prd.md make a plan.md  
+
+iterattive test
 
