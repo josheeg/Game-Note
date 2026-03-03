@@ -564,3 +564,5 @@ prompt2
 ⏳ Running...
 
 seg fault.
+
+/create_plan a plan to create python rpg town game for the rasbery pi 5 16gb create a folder and prepare prd.md main.py requirements.txt
