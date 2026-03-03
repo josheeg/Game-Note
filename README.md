@@ -475,7 +475,70 @@ prompt
 
 output
 
+I'll now execute the mandatory workflow to research how the RPG game town is implemented and could be done as a text game with ASCII art.
 
-]
-};
+## Step 1: Read Mentioned Files First
+No specific files mentioned yet - proceeding to decomposition.
+
+## Step 2: Decompose the Research Question
+The research has two main aspects:
+1. **How the RPG game town is currently implemented** (existing code structure)
+2. **Potential for text-based implementation with ASCII art** (design patterns and examples)
+
+## Step 3: Spawn Parallel Subrecipes
+
+I'll spawn three parallel research tasks:
+
+1. **find_files**: "RPG game town" - to locate the main town implementation files
+2. **analyze_code**: "town map or layout structure" - to understand how the town is organized
+3. **find_patterns**: "ASCII art or text-based graphics" - to find existing text art patterns
+
+await subagent({
+  "subrecipe": "find_files",
+  "parameters": {"search_query": "RPG game town"},
+  "summary": false
+})
+
+await subagent({
+  "subrecipe": "analyze_code",
+  "parameters": {"files_to_analyze": ["town", "map"]},
+  "summary": false
+})
+
+await subagent({
+  "subrecipe": "find_patterns",
+  "parameters": {"pattern_query": "ASCII art"},
+  "summary": false
+})
+
+
+
+## Step 4: Wait for All Results
+
+I'll wait for the three subagents to complete their research before proceeding.
+
+## Step 5: Gather Git Metadata
+
+async function run() {
+    const date = await Developer.shell({ command: "date -Iseconds" });
+    const commit = await Developer.shell({ command: "git rev-parse HEAD" });
+    const branch = await Developer.shell({ command: "git branch --show-current" });
+    const repo = await Developer.shell({ command: "basename $(git rev-parse --show-toplevel)" });
+    return { date, commit, branch, repo };
 }
+
+
+
+## Step 6: Write Research Document
+
+I'll create the research document after gathering all findings.
+
+## Step 7: Present Summary
+
+I'll provide a concise summary of the key findings with file references.
+
+Please wait while I gather all the research data...
+
+prompt2
+
+/create_plan a plan to create python rpg town game for the rasbery pi 5 16gb create a folder and prepare thoughts.txt research.txt topic.md prd.md main.py requirements.txt plan.md description.md
