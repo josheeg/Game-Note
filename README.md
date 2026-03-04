@@ -103,6 +103,9 @@ OLLAMA_CONTEXT_LENGTH=12288 OLLAMA_LOAD_TIMEOUT=9999999 OLLAMA_KEEP_ALIVE=999999
 
 
 # **client start**
+
+goose enable extensions tool usage timeouts
+
 no luck with vs code opencode 
 
 OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 g
