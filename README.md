@@ -585,5 +585,112 @@ bmad is in opencode
 ollama launch opencode 8b model.. 
 ollama bottom 
 lm studio doesnt show devstral in open code
-spec-kit in opencode seems more direct.. 
+spec-kit in opencode seems more direct..
+
+
+josheeg@josheeg:~/game-note/game/code $ specify init rpgtown
+              ███████╗██████╗ ███████╗ ██████╗██╗███████╗██╗   ██╗              
+              ██╔════╝██╔══██╗██╔════╝██╔════╝██║██╔════╝╚██╗ ██╔╝              
+              ███████╗██████╔╝█████╗  ██║     ██║█████╗   ╚████╔╝               
+              ╚════██║██╔═══╝ ██╔══╝  ██║     ██║██╔══╝    ╚██╔╝                
+              ███████║██║     ███████╗╚██████╗██║██║        ██║                 
+              ╚══════╝╚═╝     ╚══════╝ ╚═════╝╚═╝╚═╝        ╚═╝                 
+                                                                                
+               GitHub Spec Kit - Spec-Driven Development Toolkit                
+
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Specify Project Setup                                                       │
+│                                                                              │
+│  Project         rpgtown                                                     │
+│  Working Path    /home/josheeg/game-note/game/code                           │
+│  Target Path     /home/josheeg/game-note/game/code/rpgtown                   │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────── Choose your AI assistant: ──────────────────────────╮
+│                                                                              │
+
+Selected AI assistant: opencode
+Selected script type: sh
+Initialize Specify Project
+├── ● Check required tools (ok)
+├── ● Select AI assistant (opencode)
+├── ● Select script type (sh)
+├── ● Fetch latest release (release v0.1.13 (57,548 bytes))
+├── ● Download template (spec-kit-template-opencode-sh-v0.1.13.zip)
+├── ● Extract template
+├── ● Archive contents (26 entries)
+├── ● Extraction summary (2 top-level items)
+├── ● Ensure scripts executable (5 updated)
+├── ● Constitution setup (copied from template)
+├── ● Cleanup
+├── ● Initialize git repository (init failed)
+└── ● Finalize (project ready)
+
+Project ready.
+
+╭───────────────────────── Git Initialization Failed ──────────────────────────╮
+│                                                                              │
+│  Warning: Git repository initialization failed                               │
+│                                                                              │
+│  Command: git commit -m Initial commit from Specify template                 │
+│  Exit code: 128                                                              │
+│  Error: Author identity unknown                                              │
+│                                                                              │
+│  *** Please tell me who you are.                                             │
+│                                                                              │
+│  Run                                                                         │
+│                                                                              │
+│    git config --global user.email "you@example.com"                          │
+│    git config --global user.name "Your Name"                                 │
+│                                                                              │
+│  to set your account's default identity.                                     │
+│  Omit --global to set the identity only in this repository.                  │
+│                                                                              │
+│  fatal: unable to auto-detect email address (got 'josheeg@josheeg.(none)')   │
+│                                                                              │
+│  You can initialize git manually later with:                                 │
+│  cd /home/josheeg/game-note/game/code/rpgtown                                │
+│  git init                                                                    │
+│  git add .                                                                   │
+│  git commit -m "Initial commit"                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─────────────────────────── Agent Folder Security ────────────────────────────╮
+│                                                                              │
+│  Some agents may store credentials, auth tokens, or other identifying and    │
+│  private artifacts in the agent folder within your project.                  │
+│  Consider adding .opencode/ (or parts of it) to .gitignore to prevent        │
+│  accidental credential leakage.                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭───────────────────────────────── Next Steps ─────────────────────────────────╮
+│                                                                              │
+│  1. Go to the project folder: cd rpgtown                                     │
+│  2. Start using slash commands with your AI agent:                           │
+│     2.1 /speckit.constitution - Establish project principles                 │
+│     2.2 /speckit.specify - Create baseline specification                     │
+│     2.3 /speckit.plan - Create implementation plan                           │
+│     2.4 /speckit.tasks - Generate actionable tasks                           │
+│     2.5 /speckit.implement - Execute implementation                          │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────── Enhancement Commands ────────────────────────────╮
+│                                                                              │
+│  Optional commands that you can use for your specs (improve quality &        │
+│  confidence)                                                                 │
+│                                                                              │
+│  ○ /speckit.clarify (optional) - Ask structured questions to de-risk         │
+│  ambiguous areas before planning (run before /speckit.plan if used)          │
+│  ○ /speckit.analyze (optional) - Cross-artifact consistency & alignment      │
+│  report (after /speckit.tasks, before /speckit.implement)                    │
+│  ○ /speckit.checklist (optional) - Generate quality checklists to validate   │
+│  requirements completeness, clarity, and consistency (after /speckit.plan)   │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
 
