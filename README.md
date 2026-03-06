@@ -581,14 +581,18 @@ I'll help you create a detailed implementation plan for your Python RPG town gam
 where? checking file read write example...
 
 spec-kit speckify seems interesting
+
 bmad is in opencode
+
 ollama launch opencode 8b model.. 
+
 ollama bottom 
+
 lm studio doesnt show devstral in open code
+
 spec-kit in opencode seems more direct..
 
-
-josheeg@josheeg:~/game-note/game/code $ specify init rpgtown
+josheeg@josheeg:~/game-note/game/code $ specify init townrpg
               ███████╗██████╗ ███████╗ ██████╗██╗███████╗██╗   ██╗              
               ██╔════╝██╔══██╗██╔════╝██╔════╝██║██╔════╝╚██╗ ██╔╝              
               ███████╗██████╔╝█████╗  ██║     ██║█████╗   ╚████╔╝               
@@ -602,9 +606,9 @@ josheeg@josheeg:~/game-note/game/code $ specify init rpgtown
 │                                                                              │
 │  Specify Project Setup                                                       │
 │                                                                              │
-│  Project         rpgtown                                                     │
+│  Project         townrpg                                                     │
 │  Working Path    /home/josheeg/game-note/game/code                           │
-│  Target Path     /home/josheeg/game-note/game/code/rpgtown                   │
+│  Target Path     /home/josheeg/game-note/game/code/townrpg                   │
 │                                                                              │
 ╰──────────────────────────────────────────────────────────────────────────────╯
 
@@ -625,38 +629,10 @@ Initialize Specify Project
 ├── ● Ensure scripts executable (5 updated)
 ├── ● Constitution setup (copied from template)
 ├── ● Cleanup
-├── ● Initialize git repository (init failed)
+├── ● Initialize git repository (existing repo detected)
 └── ● Finalize (project ready)
 
 Project ready.
-
-╭───────────────────────── Git Initialization Failed ──────────────────────────╮
-│                                                                              │
-│  Warning: Git repository initialization failed                               │
-│                                                                              │
-│  Command: git commit -m Initial commit from Specify template                 │
-│  Exit code: 128                                                              │
-│  Error: Author identity unknown                                              │
-│                                                                              │
-│  *** Please tell me who you are.                                             │
-│                                                                              │
-│  Run                                                                         │
-│                                                                              │
-│    git config --global user.email "you@example.com"                          │
-│    git config --global user.name "Your Name"                                 │
-│                                                                              │
-│  to set your account's default identity.                                     │
-│  Omit --global to set the identity only in this repository.                  │
-│                                                                              │
-│  fatal: unable to auto-detect email address (got 'josheeg@josheeg.(none)')   │
-│                                                                              │
-│  You can initialize git manually later with:                                 │
-│  cd /home/josheeg/game-note/game/code/rpgtown                                │
-│  git init                                                                    │
-│  git add .                                                                   │
-│  git commit -m "Initial commit"                                              │
-│                                                                              │
-╰──────────────────────────────────────────────────────────────────────────────╯
 
 ╭─────────────────────────── Agent Folder Security ────────────────────────────╮
 │                                                                              │
@@ -669,7 +645,7 @@ Project ready.
 
 ╭───────────────────────────────── Next Steps ─────────────────────────────────╮
 │                                                                              │
-│  1. Go to the project folder: cd rpgtown                                     │
+│  1. Go to the project folder: cd townrpg                                     │
 │  2. Start using slash commands with your AI agent:                           │
 │     2.1 /speckit.constitution - Establish project principles                 │
 │     2.2 /speckit.specify - Create baseline specification                     │
@@ -692,5 +668,6 @@ Project ready.
 │  requirements completeness, clarity, and consistency (after /speckit.plan)   │
 │                                                                              │
 ╰──────────────────────────────────────────────────────────────────────────────╯
+josheeg@josheeg:~/game-note/game/code $ 
 
 
