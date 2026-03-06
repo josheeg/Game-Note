@@ -574,3 +574,11 @@ I'll help you create a detailed implementation plan for your Python RPG town gam
 07:13 AM
 
 where? checking file read write example...
+
+spec-kit speckify seems interesting
+bmad is in opencode
+ollama launch opencode 8b model.. 
+ollama bottom 
+lm studio doesnt show devstral in open code
+spec-kit in opencode seems more direct.. 
+
