@@ -136,6 +136,7 @@ OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 opencode web
 
 OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 opencode 
 
+OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 launch claude
 
 # **sceduled sd or ssd backup incrimently over time....**
 
