@@ -20,3 +20,19 @@ claude code specify test
 
 ollama models qwen3.5 9b for testing claude code and opencode local and documentation spec and mcp
 
+server start
+
+OLLAMA_CONTEXT_LENGTH=12288 OLLAMA_LOAD_TIMEOUT=9999999 OLLAMA_KEEP_ALIVE=9999999 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_NUM_PARALLEL=1 ollama serve
+
+client start
+
+goose enable extensions tool usage timeouts
+
+
+OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 ollama launch
+
+OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 opencode web
+
+OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 opencode
+
+OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 ollama launch
