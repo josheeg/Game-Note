@@ -36,3 +36,23 @@ OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 opencode web
 OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 opencode
 
 OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 ollama launch
+
+
+ 1. You're already in the project directory!                                                                         │
+│  2. Start using slash commands with your AI agent:
+
+/speckit.constitution 
+
+/speckit.specify 
+
+/speckit.clarify 
+
+/speckit.plan 
+
+/speckit.checklist
+
+/speckit.tasks 
+
+/speckit.analyze 
+
+/speckit.implement 
