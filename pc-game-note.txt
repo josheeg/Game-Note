@@ -47,6 +47,8 @@ specify init .
 
 │  2. Start using slash commands with your AI agent:
 
+bmad-help I have an idea for a SaaS product, I already know all the features I want. where do I get started?
+
 /opsx:propose "   "
 
 /opsx:apply
