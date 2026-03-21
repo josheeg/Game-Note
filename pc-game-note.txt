@@ -6,7 +6,7 @@ Many things seem to work now that the system is faster to reducde timeouts
 
 timeout and configuration scripts seem nessisary for long prompts
 
-agent frameworks have plan and other modes but opencode seens to work now work localy with ollama and the specification programs
+agent frameworks have plan and other modes but opencode seens to work now work localy with ollama and the specification programs and claude code
 
 qwen 3.5 is mentioned in ollama launch opencode ollama launch claude code. 
 
@@ -15,6 +15,8 @@ kilo code vs code works with code base index but gets lost as things get big and
 testing
 
 claude code init test
+
+claude code specify test
 
 ollama models qwen3.5 9b for testing claude code and opencode local and documentation spec and mcp
 
