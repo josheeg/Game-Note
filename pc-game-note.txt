@@ -39,7 +39,17 @@ OLLAMA_TIMEOUT=9999999 OPENAI_TIMEOUT=9999999 ollama launch
 
 
  1. You're already in the project directory!                                                                         │
+
+openspec init
+
+specify init . 
+
+
 │  2. Start using slash commands with your AI agent:
+
+/opsx:propose "   "
+
+/opsx:apply
 
 /speckit.constitution 
 
