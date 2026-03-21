@@ -53,6 +53,8 @@ specify init .
 
 /opsx:archive
 
+bmad-help what should I do first?
+
 /speckit.constitution 
 
 /speckit.specify 
