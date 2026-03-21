@@ -51,6 +51,8 @@ specify init .
 
 /opsx:apply
 
+/opsx:archive
+
 /speckit.constitution 
 
 /speckit.specify 
