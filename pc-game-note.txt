@@ -118,10 +118,10 @@ added spec-kit specify init .
 
 /speckit.constitution
 
-/speckit.specify "web scrape a new csv file of data for system formatted correctly"
-/speckit.specify "a radio button list of sugjested web url and past acuracy precision statistics data"
-/speckit.specify "a testing framework coverage"
-/speckit.specify "a lint test and test for robustness"
+/speckit.specify " create a list to add these spec features a feature web scrape a new csv file of data for system formatted correctly and a feature a radio button list of sugjested web url and past acuracy precision statistics data from past games scraped as a button to csv correctly formated. and a feature a testing framework coverage and a feature a lint test and test for robustness"
+
+/speckit.specify " create a list to add these spec features a feature a testing framework, testing coverage and a feature a lint test and test for robustness"
+
 
 /speckit.clarify 
 
