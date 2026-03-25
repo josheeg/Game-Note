@@ -110,6 +110,25 @@ bmad-help what should I do first?
 
 /speckit.tasks 
 
+Running opencode tui web based free model
+
+using github bracket brain as a base
+
+added spec-kit specify init .
+
+/speckit.constitution
+
+/speckit.specify "web scrape a new csv file of data for system formatted correctly"
+
+/speckit.clarify 
+
+/speckit.plan 
+
+/speckit.checklist
+
+/speckit.tasks 
+
+
 /speckit.analyze 
 
 /speckit.implement 
