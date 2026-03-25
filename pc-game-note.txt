@@ -120,6 +120,8 @@ added spec-kit specify init .
 
 /speckit.specify "web scrape a new csv file of data for system formatted correctly"
 /speckit.specify "a radio button list of sugjested web url and past acuracy precision statistics data"
+/speckit.specify "a testing framework coverage"
+/speckit.specify "a lint test and test for robustness"
 
 /speckit.clarify 
 
