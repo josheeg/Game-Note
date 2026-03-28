@@ -2,6 +2,8 @@ PC or pi with opencode can use decent ammounts of free models to update or add b
 
 spec-kit specify init . seems to be very good with open code with the oh my open code plugin ... web scraping
 
+add to constitution virtual evviroment
+
 add a feature to the specification list for debugging framework and a feature to the specification list for a testing framework" 
 
 add a button to web scrape data for spreadsheet for current bracket and forcasting format scraped_data.csv spreadsheet for use with the program
