@@ -2,6 +2,17 @@ PC or pi with opencode can use decent ammounts of free models to update or add b
 
 spec-kit specify init . seems to be very good with open code with the oh my open code plugin ... web scraping
 
+
+/speckit.constitution "create a list of features add feature test framework add feature debug framework add feature lint feature add feature documentation framework add feature local ci framework add feature typesafety framework add feature security scanning framework add feature error tracking framework add feature virtual enviroment add feature testing framework add feature debug framework"
+
+
+with renpy mcp fooocus and renpy mcp.
+
+
+/speckit.specify " create a list to add these specification feature a feature web scrape a new csv file of data for system formatted correctly and a feature a radio button list of sugjested web url and past acuracy precision statistics data from past games scraped as a button to csv correctly formated."
+
+
+
 add to constitution virtual evviroment
 
 add a feature to the constitution list for debugging framework and a feature to the constitution list for a testing framework" 
