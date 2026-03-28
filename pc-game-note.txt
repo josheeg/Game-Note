@@ -134,7 +134,7 @@ added spec-kit specify init .
 
 /speckit.constitution
 
-/speckit.constitution "create a list of features add feature test framework add feature debug framework add feature lint feature add feature documentation framework"
+/speckit.constitution "create a list of features add feature test framework add feature debug framework add feature lint feature add feature documentation framework add feature local ci framework add feature typesafety framework add feature security scanning framework add feature error tracking framework"
 
 
 /speckit.specify " create a list to add these spec features a feature web scrape a new csv file of data for system formatted correctly and a feature a radio button list of sugjested web url and past acuracy precision statistics data from past games scraped as a button to csv correctly formated. and a feature a testing framework coverage and a feature a lint test and test for robustness"
