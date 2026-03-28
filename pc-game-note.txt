@@ -4,7 +4,8 @@ spec-kit specify init . seems to be very good with open code with the oh my open
 
 add to constitution virtual evviroment
 
-add a feature to the specification list for debugging framework and a feature to the specification list for a testing framework" 
+add a feature to the constitution list for debugging framework and a feature to the constitution list for a testing framework" 
+
 
 add a button to web scrape data for spreadsheet for current bracket and forcasting format scraped_data.csv spreadsheet for use with the program
 
