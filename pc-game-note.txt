@@ -6,10 +6,9 @@ add to constitution virtual evviroment
 
 add a feature to the constitution list for debugging framework and a feature to the constitution list for a testing framework" 
 
+/speckit.specify "add a button to web scrape data for spreadsheet for current bracket and forcasting format scraped_data.csv spreadsheet for use with the program to forcast upcoming bracket"
 
-add a button to web scrape data for spreadsheet for current bracket and forcasting format scraped_data.csv spreadsheet for use with the program
-
-add a button to get a previous year s data scraped for a spreadsheet for the years bracket to forcast and compare with the result to the forcastings acuracy and precision 
+/speckit.specify "add a button to get a previous year s data scraped for a spreadsheet for the years bracket to forcast and compare with the result to the forcastings acuracy and precision for that year and over past data" 
 
 
 add a button to get a previous year s data scraped for a spreadsheet for the years bracket to forcast and compare with the result to the forcastings acuracy and precision 
