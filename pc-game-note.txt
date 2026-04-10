@@ -151,6 +151,9 @@ added spec-kit specify init .
 /speckit.specify " create a list to add these specification feature a feature web scrape a new csv file of data for system formatted correctly and a feature a radio button list of sugjested web url and past acuracy precision statistics data from past games scraped as a button to csv correctly formated."
 
 
+/speckit.specify " create a list to add these specification feature a feature data science dependencies add a feature  keras  add a feature  keras tunner  add a feature  cnn 2d ltsm forcasting deep nn. ."
+
+
 /speckit.clarify 
 
 /speckit.plan 
