@@ -153,6 +153,8 @@ added spec-kit specify init .
 
 /speckit.specify " create a list to add these specification feature a feature data science dependencies add a feature  keras  add a feature  keras tunner  add a feature  cnn 2d ltsm forcasting deep nn. ."
 
+/speckit.specify " create a list to add these specification feature a feature data science dependencies add a feature  keras  add a feature  keras tunner  add a feature  cnn 2d ltsm forcasting deep nn. add a monticarlo simulation framework and state machine libraries. add in python add requirements.txt"
+
 
 /speckit.clarify 
 
