@@ -1,0 +1,5 @@
+simple hello world like test program
+request 1: standard console hello world message
+request 2: personalized hello world message with custom target name
+minimum test coverage target: 30%
+the projects note that goes into brainstorming
