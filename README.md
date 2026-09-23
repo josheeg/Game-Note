@@ -6,3 +6,10 @@ activate that with the command given
 install bmad 
 npx bmad-method install
 
+next 
+skills 
+
+@bmad-loop-setup 
+
+@bmad-project-context
+
