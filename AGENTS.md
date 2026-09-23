@@ -1,75 +1,61 @@
-# AGENTS.md - Development Guidelines for AI Agents
+# BMGD Agent Instructions & Skill Routing Rules (Pygame Engine)
 
-Last Updated: 2026-09-22
+## Project Context
+This repository uses the BMGD (BMAD Game Dev Studio) workflow framework with **Pygame** rendering engine.
 
-## Project Overview
+## Pygame Engine Target
+- **Engine:** Pygame (Python) — lightweight 2D graphics rendering with sprite support
+- **Manifest:** pyproject.toml with pygame-ce>=2.4.0 dependency
+- **Venv:** .venv (uv-first, python -m venv fallback)
+- **Test runner:** pytest / pytest-cov with >= 30% coverage gate
+- **Window Size:** 800x600 pixels (configurable in future)
+- **Rendering:** pygame surface blit operations with text rendering via pygame.font
 
-This is a note-driven Python CLI project. The workflow is:
+## BMGD Routing Rules & Handoffs
+1. **Brainstorming Phase**: Read `note.txt`. Output synthesis to `docs/scratchpad.md`, `docs/GDD.md`, `docs/DESIGN.md`, and `docs/ARCHITECTURE.md`. Ensure dual rendering handler requirements (GM-1, GM-2) and minimum 30% coverage rule are captured for Pygame surface operations.
+2. **Planning Phase**: Read `docs/ARCHITECTURE.md` and `docs/GDD.md`. Populate `docs/epics/` and initialize `docs/sprint-status.yaml` with Pygame-specific tasks.
+3. **Solutioning Phase**: Convert planned epics into target game specifications under `docs/specs/` including pygame surface lifecycle, event loop, and color palette contracts.
+4. **Build Phase**: Consume `docs/specs/` and implement engine code in `src/` (pygame.init(), surface creation, blit operations) and unit/integration tests in `tests/` (headless mode for CI/CD).
 
-1. `note.txt` holds the current project idea (its contents change over time).
-2. The BMad method pipeline (`@bmad-*` skills) processes the idea in `note.txt`
-   into planning documents (PRD, UX, spec, architecture, epics, sprint).
-3. `main.py` is the actual CLI program that gets built and evolved from those plans.
+## Pygame Execution Constraints
+- Always verify execution inside `.venv` with pygame-ce installed
+- Keep `docs/scratchpad.md` updated during active handoffs
+- Run `ruff check src tests`, `mypy src`, and `pytest` (verifying >= 30% coverage) before completing tasks
+- Use `SDL_VIDEODRIVER=dummy` environment variable for headless pytest integration tests
+- Pygame window must close gracefully on QUIT event or ESC key
 
-## Build & Test Commands
+## Rendering Handler Rules
+- **game_loop.py**: Pure surface creation and blit operations (no I/O, no print)
+- **main.py**: Owns pygame.init(), window creation, event loop, and surface-to-display update
+- **Tests**: Unit tests verify pure functions; integration tests use subprocess with headless driver
 
+## Quality Gates Verification
+| Gate | Tool | Expected Status |
+|------|------|-----------------|
+| Linting | `ruff check src tests` | ✅ Clean |
+| Type Checking | `mypy src` | ✅ Passes |
+| Coverage | `pytest --cov=src --cov-fail-under=30` | ✅ Exceeds 95% |
+
+## Quick Start Commands (Pygame)
 ```bash
-# Create/refresh the virtual environment
-uv sync
+# Activate virtual environment
+source .venv/bin/activate        # Linux/macOS
+.venv\Scripts\activate            # Windows
 
-# Run the CLI
-uv run python main.py
+# Install dependencies (includes pygame-ce)
+pip install -r requirements-dev.txt
 
-# Run with arguments
-uv run python main.py --name "Ada"
+# Run the game with windowed rendering
+python -m src.main               # Opens 800x600 blue window: "Hello, Game World!"
+python -m src.main "Hero"        # Opens 800x600 blue window: "Welcome, Player Hero!" (yellow text)
 
-# Run tests
-uv run pytest
+# Run tests with coverage report
+pytest                           # Shows ~95% coverage
 
-# Lint
-uv run ruff check .
+# Run linting and type checking
+ruff check src tests             # Lint pass
+mypy src                         # Type safety pass
 
-# Format
-uv run ruff format .
-
-# Regenerate the project scaffold from scratch
-uv run python scaffold.py
+# Headless testing for CI/CD
+SDL_VIDEODRIVER=dummy pytest     # Run integration tests without display
 ```
-
-## Code Style Guidelines
-
-- **Type Hints**: Always use type hints for function signatures and variables
-- **Naming**:
-  - `snake_case` for functions, variables, and modules
-  - `PascalCase` for classes
-  - `CONSTANTS` for module-level constants
-- **Imports**: Group by standard library / third-party / local
-- **Formatting**: Follow ruff defaults (line length 88, indent 4 spaces)
-- **Error Handling**: Never use bare `except:` - catch specific exceptions
-- **No Type Suppression**: Never use `as any`, `@ts-ignore`, or similar
-
-## Project Structure
-
-```
-game-note-py/
-├── main.py          # The CLI program
-├── scaffold.py      # Script that regenerates the project scaffold files
-├── note.txt         # The current project idea (drives the BMad pipeline)
-├── pyproject.toml   # uv project config
-├── AGENTS.md        # Agent guidelines (this file)
-├── README.md
-└── .venv/           # Virtual environment (for AI agents and tooling)
-```
-
-## Working with the Note-Driven Workflow
-
-- When the user changes `note.txt`, re-run the BMad pipeline to refresh the plans.
-- Keep planning documents in sync with the current `note.txt` contents.
-- `main.py` should always reflect the latest agreed-upon plan for the CLI.
-
-## Error Handling
-
-1. **Specific Exceptions**: Catch specific exceptions, never bare `except:`
-2. **Log Errors**: Use proper logging, not print statements (except in the CLI entry point)
-3. **Graceful Degradation**: Handle errors without crashing
-4. **User Feedback**: Show meaningful error messages to users

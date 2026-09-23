@@ -3,3 +3,6 @@ pytest-cov>=4.0.0
 ruff>=0.1.0
 mypy>=1.0.0
 debugpy>=1.6.0
+
+# Pygame development dependencies
+pygame-ce>=2.4.0

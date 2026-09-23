@@ -1,3 +1,2 @@
-
-Production dependencies
-
+# Production dependencies
+pygame-ce>=2.4.0

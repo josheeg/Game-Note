@@ -1,19 +1,32 @@
-[project]
-name = "game-note-py"
-version = "0.1.0"
-description = "A Python CLI hello world program."
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = []
-
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
-[tool.uv]
-package = false
+[project]
+name = "game-note-bmgd"
+version = "0.1.0"
+description = "BMGD (BMAD Game Dev Studio) dual greeting engine — Pygame 2D rendering with >=30% coverage gate."
+requires-python = ">=3.10"
+dependencies = ["pygame-ce>=2.4.0"]
 
-[dependency-groups]
-dev = [
-    "pytest>=9.1.1",
-]
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=4.0", "ruff>=0.1", "mypy>=1.0"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q --cov=src --cov-fail-under=30"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src"]
+explicit_package_bases = true
+strict = true
+ignore_missing_imports = true
