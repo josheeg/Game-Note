@@ -1,5 +1,5 @@
 [project]
-name = "game-note"
+name = "game-note-godot-2"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,7 +10,7 @@ requires-python = ">=3.14"
 dependencies = []
 
 [project.scripts]
-game-note = "game_note:main"
+game-note-godot-2 = "game_note_godot_2:main"
 
 [build-system]
 requires = ["uv_build>=0.12.12,<0.13.0"]
