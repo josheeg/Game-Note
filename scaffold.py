@@ -53,7 +53,7 @@ __version__ = "0.1.0"
 
 
 def hello(name: str) -> str:
-    """Return a greeting for name, stripping whitespace and falling back to World when empty."""
+    \"\"\"Return a greeting for name, stripping whitespace and falling back to World when empty.\"\"\"
     return f"Hello, {name.strip() or 'World'}!"
 
 

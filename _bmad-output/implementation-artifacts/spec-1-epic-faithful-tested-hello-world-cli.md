@@ -2,7 +2,7 @@
 title: 'Epic 1: faithful, tested hello-world CLI'
 type: 'feature'
 created: '2026-09-22'
-status: 'in-review' # draft | ready-for-dev | in-progress | in-review | done | blocked
+status: 'done' # draft | ready-for-dev | in-progress | in-review | done | blocked
 review_loop_iteration: 0 # incremented by step-04 before each review loopback
 baseline_revision: NO_VCS # current HEAD captured by step-03; NO_VCS when version control is unavailable
 followup_review_recommended: false # set by step-04 on status: done — true if the LLM decided another review pass is worthwhile
@@ -94,10 +94,12 @@ deferred: [] # append-only machine-readable deferred review findings; each item 
 
 ## Review Triage Log
 
-<!-- Append-only. Populated by step-04 on EVERY review pass, including loopbacks and blocked exits.
-     Each entry records verdict counts (high/medium/low/false/maybe-false) and one row per
-     reviewer finding: verdict, route, and evidence — the refutation for false, what would settle
-     it for maybe-false, the action taken for patches. Empty until the first review pass. -->
+### 2026-09-23 — Review pass
+- verdicts: 3 findings — high 0, medium 0, low 1, false 2, maybe-false 0
+- findings:
+  - `[low]` `[patch]` `hello()` has no docstring documenting its whitespace-stripping behavior and "World" default — cosmetic; the fix is a trivial direct correction (one docstring line, no guards/branches/parameters), so the low-rejection clause does not apply; patched: docstring added to `hello()` in `main.py` and mirrored byte-for-byte in `scaffold.py`'s embedded `FILES["main.py"]` template (escaped `\"\"\"`), keeping regeneration consistent.
+  - `[false]` `[reject]` `main() -> int` annotation "violated" by `SystemExit` on argparse error paths — refuted: on bad args, `parser.parse_args(argv)` raises `SystemExit(2)` inside `main()` before any return, so the annotation governs only actual returned values; the intent explicitly requires error paths to exit 2 via `SystemExit` (Story 1.4, `pytest.raises(SystemExit)`).
+  - `[false]` `[reject]` `raise SystemExit(main())` in the `__main__` guard is confusing — refuted: the spec's own "Tasks & Acceptance" `main.py` bullet mandates this exact line, and "Design Notes" documents it as the return-value-aware mechanism pytest's `SystemExit` capture relies on; the pattern is correct and intentional.
 
 ## Design Notes
 
@@ -138,3 +140,30 @@ Non-obvious points preserved so the implementer does not re-derive them:
 
 **Manual checks (if no CLI):**
 - Read `main.py`: ~30 lines, stdlib-only imports, type hints on every signature with no `Any`-style suppression.
+
+## Auto Run Result
+
+**Summary of implemented change:** Rebuilt `main.py` as a ~30-line functional-core/imperative-shell CLI per AD-1..AD-5: pure `hello(name: str) -> str` with exact `name.strip() or 'World'` canonicalization (now with a docstring), `main(argv: list[str] | None = None) -> int` constructing `ArgumentParser(prog="main.py")`, `--name` (default "World"), `--version` via `action="version"` from the module-level `__version__ = "0.1.0"` (output `main.py 0.1.0`, precedence over `--name`), `print(hello(args.name))`, `return 0`, and `raise SystemExit(main())`. Added pytest as the sole dev dependency (`uv add --dev pytest`) and a capsys-based `tests/test_main.py` covering every I/O-matrix row plus pure-function unit tests. Synced `scaffold.py`'s embedded `main.py` and `pyproject.toml` templates so regeneration is idempotent.
+
+**Files changed:**
+- `main.py` — full rewrite to the contract implementation (23 lines, stdlib-only, type hints on all signatures).
+- `pyproject.toml` — added `[dependency-groups] dev = ["pytest>=9.1.1"]` (via uv; uv.lock updated).
+- `tests/test_main.py` — new; 16 capsys/pure-function tests covering the full I/O & Edge-Case Matrix.
+- `scaffold.py` — embedded `FILES["main.py"]` template replaced with the new implementation verbatim; `FILES["pyproject.toml"]` template gained the dependency-groups block.
+
+**Review findings breakdown:** Review pass 2026-09-23 — 3 findings: 1 low, 2 false, 0 high/medium/maybe-false, 0 intent_gap, 0 bad_spec, 0 defer.
+- Patches applied (1): docstring added to `hello()` in `main.py` + mirrored in the scaffold template (verified template↔disk match after regeneration).
+- Deferred: none.
+- Rejected (2): `main() -> int` "violation" refuted (argparse raises `SystemExit(2)` before return on error paths; intent mandates `pytest.raises(SystemExit)`); `raise SystemExit(main())` refuted (spec-required line, documented in Design Notes).
+
+**Verification performed:**
+- `uv run pytest` → 16 passed in 0.06s (exit 0).
+- `uv run ruff check main.py tests/ scaffold.py` → "All checks passed!" (exit 0). *(Full `ruff check .` still surfaces the 40 pre-existing out-of-scope findings in `.agents/skills` / `_bmad/scripts` — documented, not fixed.)*
+- `uv run python main.py` → stdout `Hello, World!`, exit 0.
+- `uv run python main.py --version` → stdout `main.py 0.1.0`, exit 0.
+- `uv run python main.py --name "  Ada  "` → stdout `Hello, Ada!`, exit 0.
+- `uv run python main.py --name ""` → argparse `expected one argument` on stderr, exit 2 (PowerShell drops empty args before argv; empty-name fallback covered by capsys test `main(["--name", ""])`).
+- `uv run python main.py --bogus` → stderr usage + `unrecognized arguments`, exit 2, no traceback.
+- `uv run python scaffold.py` regeneration → template matches disk (CRLF-normalized), tests still pass; regeneration is idempotent.
+
+**Residual risks:** None material. Line-ending style (CRLF on disk vs LF in template) is normalized on regeneration; the differential audit of the reconstructed baseline (NO_VCS) relies on best-effort reconstruction of the pre-change scaffold, but the live contract verification (pytest + ruff + golden CLI runs) is authoritative.
