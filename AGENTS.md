@@ -1,35 +1,75 @@
-<!-- bmad:context -->
-<!-- Verified 2026-09-22 (no git history — repo not initialized). Managed by bmad-project-context; edits inside this block are replaced on refresh. Keep anything you want preserved outside the markers. -->
+# AGENTS.md - Development Guidelines for AI Agents
 
-## game-note-py
+Last Updated: 2026-09-22
 
-Note-driven Python CLI: the idea in `note.txt` drives the BMad method pipeline (`@bmad-*` skills), which produces planning documents that guide the evolution of `main.py`. Python 3.12+ via uv; venv is `.venv/` (provisioned by uv with Python 3.14.3). Planning artifacts live in `_bmad-output/`, project knowledge in `docs/`.
+## Project Overview
 
-## Policy
+This is a note-driven Python CLI project. The workflow is:
 
-- Never commit without explicit user request.
+1. `note.txt` holds the current project idea (its contents change over time).
+2. The BMad method pipeline (`@bmad-*` skills) processes the idea in `note.txt`
+   into planning documents (PRD, UX, spec, architecture, epics, sprint).
+3. `main.py` is the actual CLI program that gets built and evolved from those plans.
 
-## Where things are
+## Build & Test Commands
 
-- CLI entry point: `main.py`; scaffold generator: `scaffold.py` (regenerates project files with `uv run python scaffold.py`; keeps `note.txt` if it exists).
-- Current idea: `note.txt` — when it changes, re-run the BMad pipeline and keep planning docs in sync with it.
-- BMad install: `_bmad/` (installer-managed, read-only edits get overwritten); agent skills: `.agents/skills`; commands: `.opencode/commands`.
+```bash
+# Create/refresh the virtual environment
+uv sync
 
-## Running and verifying
+# Run the CLI
+uv run python main.py
 
-- Always use `uv run ...` — never bare `python`, `pytest`, or `ruff`; they run outside the project venv.
-- Run the CLI: `uv run python main.py` (optional `--name`); tests: `uv run pytest`; lint: `uv run ruff check .`; format: `uv run ruff format .`
-- The package is flat (`[tool.uv] package = false`) — there is no importable package dir; do not introduce a `src/` layout or remove that flag without a plan.
+# Run with arguments
+uv run python main.py --name "Ada"
 
-## Conventions that differ from defaults
+# Run tests
+uv run pytest
 
-- Type hints on every function signature; `snake_case` functions/variables/modules, `PascalCase` classes, `CONSTANTS` for module-level constants.
-- Imports grouped standard library / third-party / local; follow ruff defaults (line length 88, 4-space indent).
-- Catch specific exceptions — never bare `except:`; log errors rather than printing (the CLI entry point is the exception).
+# Lint
+uv run ruff check .
 
-## Known pitfalls
+# Format
+uv run ruff format .
 
-- Removing `[tool.uv] package = false` breaks `uv sync` — hatchling cannot find a package dir in this script-only project.
-- `npx bmad-method install` opens an interactive TUI; in a non-TTY shell pipe Enter keys and pass `--directory <path> --tools opencode --yes` to get past the prompts.
+# Regenerate the project scaffold from scratch
+uv run python scaffold.py
+```
 
-<!-- /bmad:context -->
+## Code Style Guidelines
+
+- **Type Hints**: Always use type hints for function signatures and variables
+- **Naming**:
+  - `snake_case` for functions, variables, and modules
+  - `PascalCase` for classes
+  - `CONSTANTS` for module-level constants
+- **Imports**: Group by standard library / third-party / local
+- **Formatting**: Follow ruff defaults (line length 88, indent 4 spaces)
+- **Error Handling**: Never use bare `except:` - catch specific exceptions
+- **No Type Suppression**: Never use `as any`, `@ts-ignore`, or similar
+
+## Project Structure
+
+```
+game-note-py/
+├── main.py          # The CLI program
+├── scaffold.py      # Script that regenerates the project scaffold files
+├── note.txt         # The current project idea (drives the BMad pipeline)
+├── pyproject.toml   # uv project config
+├── AGENTS.md        # Agent guidelines (this file)
+├── README.md
+└── .venv/           # Virtual environment (for AI agents and tooling)
+```
+
+## Working with the Note-Driven Workflow
+
+- When the user changes `note.txt`, re-run the BMad pipeline to refresh the plans.
+- Keep planning documents in sync with the current `note.txt` contents.
+- `main.py` should always reflect the latest agreed-upon plan for the CLI.
+
+## Error Handling
+
+1. **Specific Exceptions**: Catch specific exceptions, never bare `except:`
+2. **Log Errors**: Use proper logging, not print statements (except in the CLI entry point)
+3. **Graceful Degradation**: Handle errors without crashing
+4. **User Feedback**: Show meaningful error messages to users
