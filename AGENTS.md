@@ -1,61 +1,35 @@
-# BMGD Agent Instructions & Skill Routing Rules (Pygame Engine)
+<!-- bmad:context -->
+<!-- Verified 2026-09-22 (no git history — repo not initialized). Managed by bmad-project-context; edits inside this block are replaced on refresh. Keep anything you want preserved outside the markers. -->
 
-## Project Context
-This repository uses the BMGD (BMAD Game Dev Studio) workflow framework with **Pygame** rendering engine.
+## game-note-py
 
-## Pygame Engine Target
-- **Engine:** Pygame (Python) — lightweight 2D graphics rendering with sprite support
-- **Manifest:** pyproject.toml with pygame-ce>=2.4.0 dependency
-- **Venv:** .venv (uv-first, python -m venv fallback)
-- **Test runner:** pytest / pytest-cov with >= 30% coverage gate
-- **Window Size:** 800x600 pixels (configurable in future)
-- **Rendering:** pygame surface blit operations with text rendering via pygame.font
+Note-driven Python CLI: the idea in `note.txt` drives the BMad method pipeline (`@bmad-*` skills), which produces planning documents that guide the evolution of `main.py`. Python 3.12+ via uv; venv is `.venv/` (provisioned by uv with Python 3.14.3). Planning artifacts live in `_bmad-output/`, project knowledge in `docs/`.
 
-## BMGD Routing Rules & Handoffs
-1. **Brainstorming Phase**: Read `note.txt`. Output synthesis to `docs/scratchpad.md`, `docs/GDD.md`, `docs/DESIGN.md`, and `docs/ARCHITECTURE.md`. Ensure dual rendering handler requirements (GM-1, GM-2) and minimum 30% coverage rule are captured for Pygame surface operations.
-2. **Planning Phase**: Read `docs/ARCHITECTURE.md` and `docs/GDD.md`. Populate `docs/epics/` and initialize `docs/sprint-status.yaml` with Pygame-specific tasks.
-3. **Solutioning Phase**: Convert planned epics into target game specifications under `docs/specs/` including pygame surface lifecycle, event loop, and color palette contracts.
-4. **Build Phase**: Consume `docs/specs/` and implement engine code in `src/` (pygame.init(), surface creation, blit operations) and unit/integration tests in `tests/` (headless mode for CI/CD).
+## Policy
 
-## Pygame Execution Constraints
-- Always verify execution inside `.venv` with pygame-ce installed
-- Keep `docs/scratchpad.md` updated during active handoffs
-- Run `ruff check src tests`, `mypy src`, and `pytest` (verifying >= 30% coverage) before completing tasks
-- Use `SDL_VIDEODRIVER=dummy` environment variable for headless pytest integration tests
-- Pygame window must close gracefully on QUIT event or ESC key
+- Never commit without explicit user request.
 
-## Rendering Handler Rules
-- **game_loop.py**: Pure surface creation and blit operations (no I/O, no print)
-- **main.py**: Owns pygame.init(), window creation, event loop, and surface-to-display update
-- **Tests**: Unit tests verify pure functions; integration tests use subprocess with headless driver
+## Where things are
 
-## Quality Gates Verification
-| Gate | Tool | Expected Status |
-|------|------|-----------------|
-| Linting | `ruff check src tests` | ✅ Clean |
-| Type Checking | `mypy src` | ✅ Passes |
-| Coverage | `pytest --cov=src --cov-fail-under=30` | ✅ Exceeds 95% |
+- CLI entry point: `main.py`; scaffold generator: `scaffold.py` (regenerates project files with `uv run python scaffold.py`; keeps `note.txt` if it exists).
+- Current idea: `note.txt` — when it changes, re-run the BMad pipeline and keep planning docs in sync with it.
+- BMad install: `_bmad/` (installer-managed, read-only edits get overwritten); agent skills: `.agents/skills`; commands: `.opencode/commands`.
 
-## Quick Start Commands (Pygame)
-```bash
-# Activate virtual environment
-source .venv/bin/activate        # Linux/macOS
-.venv\Scripts\activate            # Windows
+## Running and verifying
 
-# Install dependencies (includes pygame-ce)
-pip install -r requirements-dev.txt
+- Always use `uv run ...` — never bare `python`, `pytest`, or `ruff`; they run outside the project venv.
+- Run the CLI: `uv run python main.py` (optional `--name`); tests: `uv run pytest`; lint: `uv run ruff check .`; format: `uv run ruff format .`
+- The package is flat (`[tool.uv] package = false`) — there is no importable package dir; do not introduce a `src/` layout or remove that flag without a plan.
 
-# Run the game with windowed rendering
-python -m src.main               # Opens 800x600 blue window: "Hello, Game World!"
-python -m src.main "Hero"        # Opens 800x600 blue window: "Welcome, Player Hero!" (yellow text)
+## Conventions that differ from defaults
 
-# Run tests with coverage report
-pytest                           # Shows ~95% coverage
+- Type hints on every function signature; `snake_case` functions/variables/modules, `PascalCase` classes, `CONSTANTS` for module-level constants.
+- Imports grouped standard library / third-party / local; follow ruff defaults (line length 88, 4-space indent).
+- Catch specific exceptions — never bare `except:`; log errors rather than printing (the CLI entry point is the exception).
 
-# Run linting and type checking
-ruff check src tests             # Lint pass
-mypy src                         # Type safety pass
+## Known pitfalls
 
-# Headless testing for CI/CD
-SDL_VIDEODRIVER=dummy pytest     # Run integration tests without display
-```
+- Removing `[tool.uv] package = false` breaks `uv sync` — hatchling cannot find a package dir in this script-only project.
+- `npx bmad-method install` opens an interactive TUI; in a non-TTY shell pipe Enter keys and pass `--directory <path> --tools opencode --yes` to get past the prompts.
+
+<!-- /bmad:context -->

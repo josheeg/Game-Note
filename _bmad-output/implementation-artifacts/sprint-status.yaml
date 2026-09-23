@@ -1,9 +1,9 @@
-# generated: 2026-09-22
-# last_updated: 2026-09-22
-# project: game-note-py
+# generated: 2026-09-23
+# last_updated: 2026-09-23
+# project: test-godot-game
 # project_key: NOKEY
 # tracking_system: file-system
-# story_location: _bmad-output/implementation-artifacts
+# story_location: "C:/Users/joshe/Documents/game-note-gds/_bmad-output/implementation-artifacts"
 
 # STATUS DEFINITIONS:
 # ==================
@@ -12,15 +12,11 @@
 #   - in-progress: Epic actively being worked on
 #   - done: All stories in epic completed
 #
-# Epic Status Transitions:
-#   - backlog → in-progress: Automatically when first story is created (via create-story)
-#   - in-progress → done: Manually when all stories reach 'done' status
-#
 # Story Status:
 #   - backlog: Story only exists in epic file
-#   - ready-for-dev: Story file created in stories folder
+#   - ready-for-dev: Story file created, ready for development
 #   - in-progress: Developer actively working on implementation
-#   - review: Ready for code review (via Dev's code-review workflow)
+#   - review: Implementation complete, ready for review
 #   - done: Story completed
 #
 # Retrospective Status:
@@ -29,24 +25,66 @@
 #
 # WORKFLOW NOTES:
 # ===============
-# - Epic transitions to 'in-progress' automatically when first story is created
-# - Stories can be worked in parallel if team capacity allows
-# - SM typically creates next story after previous one is 'done' to incorporate learnings
-# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+# - Mark epic as 'in-progress' when starting work on its first story
+# - SM typically creates next story ONLY after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then Dev runs code-review (fresh context, ideally different LLM)
 
-generated: 2026-09-22
-last_updated: 2026-09-22
-project: game-note-py
+generated: 2026-09-23
+last_updated: 2026-09-23
+project: test-godot-game
 project_key: NOKEY
 tracking_system: file-system
-story_location: _bmad-output/implementation-artifacts
+story_location: "C:/Users/joshe/Documents/game-note-gds/_bmad-output/implementation-artifacts"
 
 development_status:
-  # All epics, stories, and retrospectives in order
   epic-1: backlog
-  1-1-canonical-greeting-on-bare-run: backlog
-  1-2-custom-greeting-with-name: backlog
-  1-3-version-reporting-with-version: backlog
-  1-4-errors-and-help: backlog
-  1-5-test-suite-contract-verification-and-one-sitting-readability: backlog
+  1-1-audio-stream-generator-voice-pool: backlog
+  1-2-wind-bed-synth-layer: backlog
+  1-3-footstep-pattern-rhythm-layer: backlog
+  1-4-two-creature-counter-melody-voices: backlog
+  1-5-two-melodic-seed-voices-with-persistent-layering: backlog
+  1-6-scale-system-selector-musicality-test-harness: backlog
   epic-1-retrospective: optional
+
+  epic-2: backlog
+  2-1-svg-to-godot-scene-tooling-pipeline: backlog
+  2-2-player-controller: backlog
+  2-3-listen-mechanic-directional-sound-amplification: backlog
+  2-4-meadow-biome-scene: backlog
+  2-5-first-locate-puzzle-tutorial-by-contact: backlog
+  epic-2-retrospective: optional
+
+  epic-3: backlog
+  3-1-locate-puzzle-system: backlog
+  3-2-sequence-puzzle-system: backlog
+  3-3-awaken-puzzle-system: backlog
+  3-4-hint-support-system: backlog
+  3-5-5-required-4-6-optional-puzzle-placements: backlog
+  epic-3-retrospective: optional
+
+  epic-4: backlog
+  4-1-soil-ring-placement-mechanics-seed-growth-timeline: backlog
+  4-2-awakened-voices-ledger: backlog
+  4-3-growth-bridge-gate: backlog
+  4-4-bloom-gate-parting-thicket: backlog
+  4-5-gate-economy-balance: backlog
+  epic-4-retrospective: optional
+
+  epic-5: backlog
+  5-1-oak-grove-biome: backlog
+  5-2-stream-crossing-biome: backlog
+  5-3-pine-ridge-biome: backlog
+  5-4-the-clearing-biome: backlog
+  5-5-the-hill-hush-transition: backlog
+  5-6-hilltop-finale-sequence: backlog
+  5-7-arc-beat-state-manager: backlog
+  5-8-2-3-story-echo-sonic-vignettes: backlog
+  epic-5-retrospective: optional
+
+  epic-6: backlog
+  6-1-audio-visualizer-assist: backlog
+  6-2-colorblind-palette-variant: backlog
+  6-3-performance-pass: backlog
+  6-4-web-demo-build-autoplay-policy-handling: backlog
+  6-5-pause-menu-screens-store-page-assets: backlog
+  epic-6-retrospective: optional

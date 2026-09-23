@@ -1,6 +1,1 @@
-engine: pygame
-simple hello world program is on the note
-request 1: render game loop with canvas "Hello, Game World!" text (centered)
-request 2: render personalized player greeting with custom player name (colored differently)
-minimum test coverage target: 30%
-the projects note that goes into bmgd brainstorming
+a test godot game

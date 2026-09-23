@@ -1,0 +1,12 @@
+# GDS Module Configuration
+# Consumed by all gds-* skills at activation (Step: Load Config).
+# Placeholder values ({project-root}) resolve against the project root.
+
+user_name: Joshe
+project_name: test-godot-game
+communication_language: English
+document_output_language: English
+game_dev_experience: 1
+output_folder: _bmad-output
+planning_artifacts: "{project-root}/_bmad-output/planning-artifacts"
+implementation_artifacts: "{project-root}/_bmad-output/implementation-artifacts"

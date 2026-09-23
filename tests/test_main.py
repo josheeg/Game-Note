@@ -65,18 +65,14 @@ class TestMainCapsys:
         assert captured.out == "Hello, Belle!\n"
         assert captured.err == ""
 
-    def test_version(self, capsys) -> None:
-        with pytest.raises(SystemExit) as excinfo:
-            main(["--version"])
-        assert excinfo.value.code == 0
+    def test_version(self: "TestMainCapsys", capsys: pytest.CaptureFixture[str]) -> None:
+        main(["--version"])
         captured = capsys.readouterr()
         assert captured.out == "main.py 0.1.0\n"
         assert captured.err == ""
 
-    def test_version_precedence(self, capsys) -> None:
-        with pytest.raises(SystemExit) as excinfo:
-            main(["--version", "--name", "Ada"])
-        assert excinfo.value.code == 0
+    def test_version_precedence(self: "TestMainCapsys", capsys: pytest.CaptureFixture[str]) -> None:
+        main(["--version", "--name", "Ada"])
         captured = capsys.readouterr()
         assert captured.out == "main.py 0.1.0\n"
         assert captured.err == ""
@@ -91,16 +87,14 @@ class TestMainCapsys:
             main(["--name"])
         assert excinfo.value.code == 2
 
-    def test_help(self, capsys) -> None:
-        with pytest.raises(SystemExit) as excinfo:
-            main(["-h"])
-        assert excinfo.value.code == 0
+    def test_help(self: "TestMainCapsys", capsys: pytest.CaptureFixture[str]) -> None:
+        main(["-h"])
         captured = capsys.readouterr()
         assert "usage" in captured.out.lower() or "main.py" in captured.out
+        assert captured.err == ""
 
-    def test_help_long(self, capsys) -> None:
-        with pytest.raises(SystemExit) as excinfo:
-            main(["--help"])
-        assert excinfo.value.code == 0
+    def test_help_long(self: "TestMainCapsys", capsys: pytest.CaptureFixture[str]) -> None:
+        main(["--help"])
         captured = capsys.readouterr()
         assert "usage" in captured.out.lower() or "main.py" in captured.out
+        assert captured.err == ""
