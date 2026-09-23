@@ -4,6 +4,16 @@ A note-driven Godot game project. The idea in `note.txt` drives the Game Dev Stu
 pipeline (`gds-*` skills), which produces planning documents that guide the
 evolution of the game.
 
+uv init
+uv venv
+npx bmad-method install
+
+@bmad-loop-setup skill
+
+@bmad-project-context
+
+
+
 python uv init creates folder file project system
 
 handles venv
