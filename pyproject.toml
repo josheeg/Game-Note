@@ -1,33 +1,14 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "my-project"
+name = "game-note-py"
 version = "0.1.0"
-description = "Project bootstrapped via game-note BMAD skill"
+description = "A Python CLI hello world program."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = []
 
-[tool.ruff]
-line-length = 88
-target-version = "py310"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.mypy]
-python_version = "3.10"
-strict = true
-ignore_missing_imports = true
-
-[tool.pytest.ini_options]
-minversion = "7.0"
-addopts = "-ra -q --cov=src --cov-fail-under=30"
-testpaths = ["tests"]
-
-[tool.coverage.run]
-source = ["src"]
-branch = true
-
-[tool.coverage.report]
-show_missing = true
-fail_under = 30
+[tool.uv]
+package = false
