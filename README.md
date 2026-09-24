@@ -9,7 +9,7 @@ npx bmad-method install
 next 
 skills 
 
-@bmad-loop-setup 
-
-@bmad-project-context
+//the loop command in the end of the install doesnt seem there 4b
+/bmgd-generate-project-context     game agents.md create?
+@bmad-project-context              otherwise these could be important
 
