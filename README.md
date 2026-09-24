@@ -10,6 +10,8 @@ these timeout before the bmad loop setup or project context one that creates the
 
 maby number of files at venv
 
+370 ish after bmad so venv x it.
+
 so will try the one that starts the agent. 
 
 then the other setup one... 
