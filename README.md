@@ -1,4 +1,9 @@
 Change the slider in the Ollama app under settings to your desired context length.
+ollama ps see if model has or is crashing.
+
+ollama model opencode id have the context set timeout ... 
+
+
 
 timeout ...
 so timeout may need to be adjusted and context to allow for opencode and local models. opencode doesnt seem to work with lm studio...
