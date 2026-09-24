@@ -3,5 +3,11 @@
 # Tables deep-merge over base config; keyed entries merge by key.
 # Example: override an agent descriptor, or add a new agent.
 #
+# implementation_artifacts consolidated to a single entry across TOML layers
+# (base config has both modules.gds and modules.bmm pointing to same path;
+#  keeping only modules.bmm here avoids duplication across layers)
+[modules.bmm]
+implementation_artifacts = "{project-root}/_bmad-output/implementation-artifacts"
+#
 # [agents.bmad-agent-pm]
 # description = "Prefers short, bulleted PRDs over narrative drafts."
